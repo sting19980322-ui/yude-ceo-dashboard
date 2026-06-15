@@ -3,1367 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>煜德商贸 · CEO 智能驾驶舱 (Boss 决策版)</title>
-    <!-- 引入 Chart.js & Bootstrap 5 & Lucide 图标 -->
+    <title>煜德商贸 CEO 智能驾驶舱</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         :root {
             --bg-color: #0b0e14;
-            --bg-light: #0d1117;
             --card-bg: #161b22;
             --accent-gold: #c9a063;
-            --accent-gold-hover: #e5b980;
             --text-main: #e6edf3;
             --text-dim: #848d97;
             --success-green: #238636;
             --warning-orange: #d29922;
             --danger-red: #f85149;
-            --border-color: #30363d;
-            --info-blue: #58a6ff;
         }
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             padding-bottom: 50px;
-            transition: all 0.3s ease;
-        }
-        /* 老板概览模式下的动感霓虹氛围背景 */
-        body.boss-active {
-            background: radial-gradient(circle at 50% 20%, #1c1510 0%, #0b0e14 100%);
-            box-shadow: inset 0 0 100px rgba(199, 160, 99, 0.05);
         }
         .dashboard-header {
             background: linear-gradient(90deg, #161b22 0%, #0b0e14 100%);
-            padding: 22px;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 30px;
         }
         .dashboard-title {
             color: var(--accent-gold);
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            text-shadow: 0 0 10px rgba(201, 160, 99, 0.2);
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         .stat-card {
             background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
             padding: 20px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            position: relative;
-            overflow: hidden;
+            transition: transform 0.2s;
         }
         .stat-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-gold);
-            box-shadow: 0 6px 20px rgba(201, 160, 99, 0.1);
-        }
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background-color: transparent;
-            transition: background-color 0.3s;
-        }
-        .stat-card.card-highlight::before {
-            background-color: var(--accent-gold);
-        }
-        .stat-card.card-danger::before {
-            background-color: var(--danger-red);
-        }
-        .stat-card.card-warning::before {
-            background-color: var(--warning-orange);
         }
         .stat-value {
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 5px;
-            letter-spacing: -0.5px;
         }
         .stat-label {
             color: var(--text-dim);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.5px;
         }
         .stat-change {
-            font-size: 0.8rem;
-            font-weight: 500;
+            font-size: 0.85rem;
         }
         .change-up { color: var(--success-green); }
         .change-down { color: var(--danger-red); }
         
         .table-custom {
             color: var(--text-main);
-            border-color: var(--border-color);
-            vertical-align: middle;
+            border-color: #30363d;
         }
         .table-custom th {
             color: var(--text-dim);
-            font-weight: 700;
+            font-weight: 600;
             background-color: #0d1117;
-            border-bottom: 2px solid var(--border-color);
-            font-size: 0.85rem;
-            text-transform: uppercase;
         }
-        .table-custom tbody tr {
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .table-custom tbody tr:hover {
-            background-color: rgba(201, 160, 99, 0.04) !important;
-        }
-        
-        /* 风险闪烁边框 */
-        tr.blink-danger {
-            border: 1px solid var(--danger-red);
-            box-shadow: 0 0 10px rgba(248, 81, 73, 0.1) inset;
-            animation: danger-pulse 2s infinite;
-        }
-        tr.blink-warning {
-            border: 1px solid var(--warning-orange);
-            box-shadow: 0 0 10px rgba(210, 153, 34, 0.1) inset;
-            animation: warning-pulse 2s infinite;
-        }
-        @keyframes danger-pulse {
-            0% { background-color: rgba(248, 81, 73, 0.02); }
-            50% { background-color: rgba(248, 81, 73, 0.08); }
-            100% { background-color: rgba(248, 81, 73, 0.02); }
-        }
-        @keyframes warning-pulse {
-            0% { background-color: rgba(210, 153, 34, 0.02); }
-            50% { background-color: rgba(210, 153, 34, 0.07); }
-            100% { background-color: rgba(210, 153, 34, 0.02); }
-        }
-
-        .badge-s { background-color: var(--danger-red); color: white; font-weight: 700; }
-        .badge-a { background-color: var(--warning-orange); color: black; font-weight: 700; }
-        .badge-b { background-color: var(--info-blue); color: black; font-weight: 700; }
+        .badge-s { background-color: var(--danger-red); color: white; }
+        .badge-a { background-color: var(--warning-orange); color: black; }
         
         .chart-container {
             position: relative;
-            height: 180px;
+            height: 250px;
             width: 100%;
         }
         .section-title {
             border-left: 4px solid var(--accent-gold);
-            padding-left: 12px;
+            padding-left: 15px;
             margin-bottom: 20px;
-            font-size: 1.15rem;
-            font-weight: 700;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
         .todo-list .todo-item {
             background-color: #1c2128;
-            margin-bottom: 12px;
-            padding: 12px 15px;
-            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 12px;
+            border-radius: 6px;
             border-left: 3px solid var(--accent-gold);
-            transition: all 0.2s;
-            position: relative;
-        }
-        .todo-list .todo-item.high-priority {
-            border-left-color: var(--danger-red);
-            background-color: rgba(248, 81, 73, 0.04);
-        }
-        .todo-list .todo-item:hover {
-            transform: translateX(3px);
-            background-color: #22272e;
-        }
-        /* 折叠面板 (Chat Timeline & Core Specs) */
-        .detail-pane {
-            background-color: #0d1117;
-            border: 1px solid var(--border-color);
-            border-top: none;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-            padding: 20px;
-            display: none;
-            transition: all 0.3s ease;
-        }
-        .chat-container-inner {
-            max-height: 280px;
-            overflow-y: auto;
-            padding: 10px;
-            background-color: #070a10;
-            border-radius: 8px;
-            border: 1px solid #21262d;
-        }
-        /* 聊天气泡样式 */
-        .chat-bubble {
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            max-width: 85%;
-        }
-        .chat-bubble.buyer {
-            align-self: flex-start;
-            margin-right: auto;
-        }
-        .chat-bubble.seller {
-            align-self: flex-end;
-            margin-left: auto;
-            text-align: right;
-        }
-        .chat-content {
-            padding: 10px 14px;
-            border-radius: 12px;
-            font-size: 0.9rem;
-            line-height: 1.4;
-            display: inline-block;
-            text-align: left;
-        }
-        .chat-bubble.buyer .chat-content {
-            background-color: #21262d;
-            color: var(--text-main);
-            border-top-left-radius: 0;
-        }
-        .chat-bubble.seller .chat-content {
-            background-color: rgba(35, 134, 54, 0.15);
-            color: #58a6ff;
-            border: 1px solid rgba(35, 134, 54, 0.3);
-            border-top-right-radius: 0;
-        }
-        .chat-time {
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            margin-top: 4px;
-            padding: 0 4px;
-        }
-        .bi-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 15px;
-            height: 100%;
-        }
-        .spec-item {
-            margin-bottom: 8px;
-            font-size: 0.88rem;
-        }
-        .spec-label {
-            color: var(--text-dim);
-            font-weight: 600;
-        }
-        .btn-gold {
-            background-color: var(--accent-gold);
-            color: #0b0e14;
-            font-weight: 700;
-            border: none;
-            transition: all 0.2s;
-        }
-        .btn-gold:hover {
-            background-color: var(--accent-gold-hover);
-            transform: scale(1.02);
-            color: #0b0e14;
-        }
-        .btn-outline-gold {
-            background-color: transparent;
-            color: var(--accent-gold);
-            border: 1px solid var(--accent-gold);
-            font-weight: 600;
-        }
-        .btn-outline-gold:hover {
-            background-color: var(--accent-gold);
-            color: #0b0e14;
-        }
-        
-        /* 自定义滚动条 */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #0b0e14; }
-        ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
-
-        /* 顶部一键老板开关特效 */
-        .boss-switch-card {
-            background: linear-gradient(135deg, #1c1a17 0%, #161b22 100%);
-            border: 1px solid var(--accent-gold);
-            border-radius: 12px;
-            padding: 15px 25px;
-            box-shadow: 0 0 15px rgba(199, 160, 99, 0.15);
-        }
-        .glow-btn {
-            position: relative;
-            transition: all 0.3s;
-            overflow: hidden;
-        }
-        .glow-btn.active {
-            background-color: var(--danger-red) !important;
-            color: #fff !important;
-            box-shadow: 0 0 20px rgba(248, 81, 73, 0.4);
-            border-color: var(--danger-red) !important;
-            animation: heartbeat 2.5s infinite;
-        }
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.03); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.03); }
-            70% { transform: scale(1); }
-        }
-        .nav-tabs-custom {
-            border-bottom: 1px solid var(--border-color);
-        }
-        .nav-tabs-custom .nav-link {
-            color: var(--text-dim);
-            border: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-        }
-        .nav-tabs-custom .nav-link.active {
-            color: var(--accent-gold);
-            background-color: transparent;
-            border-bottom: 2px solid var(--accent-gold);
         }
     </style>
 </head>
 <body>
 
-<!-- 头部 -->
 <div class="dashboard-header">
-    <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center gap-3">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
         <div>
-            <div class="d-flex align-items-center gap-2">
-                <i class="bi bi-shield-shaded text-warning fs-3"></i>
-                <h3 class="dashboard-title m-0">煜德商贸 · CEO 智能驾驶舱</h3>
-            </div>
-            <p class="text-dim m-0 mt-1 small">
-                <i class="bi bi-clock"></i> 数据更新时间：2026-06-15 16:30 | <i class="bi bi-currency-exchange"></i> 汇率：1 USD = 7.25 CNY | 数据口径：T-2 (2026-06-13)
-            </p>
+            <h3 class="dashboard-title m-0">煜德商贸 · CEO 智能驾驶舱</h3>
+            <p class="text-dim m-0">数据更新时间：2026-06-15 17:00 (自动数据更新 T-1) | 汇率：1 USD = 7.25 CNY</p>
         </div>
-        <div class="d-flex align-items-center gap-3">
-            <div class="boss-switch-card d-flex align-items-center gap-3">
-                <div class="text-end d-none d-md-block">
-                    <span class="d-block small text-warning fw-bold">BOSS COMMAND</span>
-                    <span class="text-dim small">一键过滤/高亮高风险与待办</span>
-                </div>
-                <button class="btn btn-outline-gold fw-bold glow-btn py-2 px-3" id="bossToggleBtn" onclick="toggleBossMode()">
-                    <i class="bi bi-lightning-charge-fill"></i> 老板一键概览模式
-                </button>
-            </div>
-            <div class="text-center bg-dark p-2 rounded border border-secondary">
-                <span class="text-dim d-block small" style="font-size:0.75rem;">经营健康评分</span>
-                <span class="badge bg-success fs-5 py-1 px-3">94 / 100</span>
-            </div>
+        <div class="text-end">
+            <span class="badge bg-success">昨日经营评分：91 / 100</span>
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
-    <!-- Tab 切换 -->
-    <div class="row mb-4">
-        <div class="col-12">
-            <ul class="nav nav-tabs nav-tabs-custom" id="dashboardTabs" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab"><i class="bi bi-grid-3x3-gap"></i> 今日经营看板</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="trend-tab" data-bs-toggle="tab" data-bs-target="#trend" type="button" role="tab"><i class="bi bi-graph-up-arrow"></i> 近 7 天趋势速览</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="oper-tab" data-bs-toggle="tab" data-bs-target="#oper" type="button" role="tab"><i class="bi bi-cpu"></i> 运营与广告诊断</button>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Tab 内容区 -->
-    <div class="tab-content" id="dashboardTabsContent">
-        <!-- 1. 今日经营看板 -->
-        <div class="tab-pane fade show active" id="overview" role="tabpanel">
-            <div class="row g-3 mb-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">今日搜索曝光</div>
-                        <div class="stat-value text-warning">3,738</div>
-                        <div class="stat-change change-up">
-                            <i class="bi bi-caret-up-fill"></i> 🟢 优于同行 (2,437)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">今日搜索点击</div>
-                        <div class="stat-value text-info">83</div>
-                        <div class="stat-change change-up">
-                            <i class="bi bi-caret-up-fill"></i> 🟢 优于同行 (62)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">今日搜索点击率 (CTR)</div>
-                        <div class="stat-value" style="color:#e5b980;">2.22%</div>
-                        <div class="stat-change change-up">
-                            <i class="bi bi-caret-up-fill"></i> 🟢 优于优秀 (2.11%)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">今日店铺访客 (UV)</div>
-                        <div class="stat-value" style="color: #58a6ff;">75</div>
-                        <div class="stat-change change-up">
-                            <i class="bi bi-caret-up-fill"></i> 🟢 优于同行 (36)
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row g-3 mb-4">
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">今日商机人数</div>
-                        <div class="stat-value" style="color:#d29922;">13</div>
-                        <div class="stat-change text-dim">
-                            询盘 1 / TM 12 (🟢 优于均值5)
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">商机转化率</div>
-                        <div class="stat-value text-success">7.51%</div>
-                        <div class="stat-change change-up">
-                            <i class="bi bi-caret-up-fill"></i> 环比暴增 +40.4%
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-danger text-center">
-                        <div class="stat-label">当日信保实收</div>
-                        <div class="stat-value text-danger">$0.00</div>
-                        <div class="stat-change text-danger">
-                            🔴 当日无成交 | 同行均 $236
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="stat-card card-highlight text-center">
-                        <div class="stat-label">近7天累积实收</div>
-                        <div class="stat-value text-success">$30,387.90</div>
-                        <div class="stat-change change-up">
-                            🟢 远超同行 ($4,042.02)
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. 近 7 天趋势速览 -->
-        <div class="tab-pane fade" id="trend" role="tabpanel">
-            <div class="row g-3 mb-4">
-                <div class="col-lg-8">
-                    <div class="stat-card h-100">
-                        <h5 class="section-title">近 7 天累计核心运营报表</h5>
-                        <div class="table-responsive">
-                            <table class="table table-custom table-hover small">
-                                <thead>
-                                    <tr>
-                                        <th>指标维度</th>
-                                        <th>近 7 天累计值</th>
-                                        <th>环比变化</th>
-                                        <th>对标行业同行均值</th>
-                                        <th>大盘评估</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="fw-bold">全店曝光量</td>
-                                        <td>33,762 次</td>
-                                        <td class="change-up"><i class="bi bi-caret-up-fill"></i> +4.9%</td>
-                                        <td class="text-success">+224.5% (大幅领先)</td>
-                                        <td>🟢 表现极佳，引流基本面扎实</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-bold">搜索点击量</td>
-                                        <td>728 次</td>
-                                        <td class="change-up"><i class="bi bi-caret-up-fill"></i> +2.8%</td>
-                                        <td class="text-dim">—</td>
-                                        <td>🟢 CTR稳定在2.2%高位，主图吸睛</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-bold">商机总量</td>
-                                        <td>86 人</td>
-                                        <td class="change-up"><i class="bi bi-caret-up-fill"></i> +2.4%</td>
-                                        <td class="text-success">+115.0% (翻倍胜出)</td>
-                                        <td>🟢 高意向商机进店多</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-bold">店铺访问量 (PV)</td>
-                                        <td class="text-warning">1,283 次</td>
-                                        <td class="change-down"><i class="bi bi-caret-down-fill"></i> -11.6%</td>
-                                        <td class="text-dim">—</td>
-                                        <td>🟡 流量从高点回落，需关注稳定性</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-bold">商机转化率</td>
-                                        <td>7.02%</td>
-                                        <td class="change-up"><i class="bi bi-caret-up-fill"></i> +40.4%</td>
-                                        <td class="text-success">行业平均为 6.33% (优于)</td>
-                                        <td>🟢 诊断提示店铺进入“稳健进阶”</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-bold">信保实收</td>
-                                        <td>$30,387.90</td>
-                                        <td class="text-dim">—</td>
-                                        <td class="text-success">行业均值 $4,042.02 (远超)</td>
-                                        <td>🟢 交易节奏偏集中，整体产出极其可观</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="stat-card h-100">
-                        <h5 class="section-title">AI 核心决策洞察</h5>
-                        <ul class="list-group list-group-flush bg-transparent text-main small" style="border:none;">
-                            <li class="list-group-item bg-transparent text-main border-secondary py-2 px-0">
-                                <span class="badge bg-success me-2">CTR 2.22%</span> 搜索点击率超越同行优秀水平（2.11%），表明香薰系列主图与标题精准契合采购商需求。
-                            </li>
-                            <li class="list-group-item bg-transparent text-main border-secondary py-2 px-0">
-                                <span class="badge bg-success me-2">CVR 7.02%</span> 商机转化率保持强劲增长（+40.4%），代表入店买家质优、业务员建联引导成功。
-                            </li>
-                            <li class="list-group-item bg-transparent text-main border-secondary py-2 px-0">
-                                <span class="badge bg-warning me-2 text-dark">PV -11.6%</span> 近 7 天 PV 从高位略微下滑，可能与近期未集中报品或自然引流入口微调有关，需防范后劲不足。
-                            </li>
-                            <li class="list-group-item bg-transparent text-main border-0 py-2 px-0">
-                                <span class="badge bg-danger me-2">实收节奏</span> 6/13单日零成交，而7天累计3.04万美元，成交多集中于打样后大单，需均衡大货交付周期。
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. 运营与广告诊断 -->
-        <div class="tab-pane fade" id="oper" role="tabpanel">
-            <div class="row g-3 mb-4">
-                <div class="col-md-4">
-                    <div class="stat-card">
-                        <h5 class="section-title">客户沟通及回复 (实时)</h5>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>TM 即时通讯</span>
-                            <span class="text-success fw-bold">今日会话 20 条 | 待回复 0 条</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>询盘跟进</span>
-                            <span class="text-warning fw-bold">新增询盘 1 人 | TM 12 人</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>回复质量评分</span>
-                            <span class="text-warning">Amber 回复延迟较多，拉低均分</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2">
-                            <span>未读积压情况</span>
-                            <span class="badge bg-success">🟢 0 会话积压</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="stat-card">
-                        <h5 class="section-title">订单及物流全景</h5>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>待支付信保订单</span>
-                            <span class="text-success fw-bold">0 笔</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>待发货大货订单</span>
-                            <span class="text-success fw-bold">0 笔 (无积压)</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>海运/快递在途</span>
-                            <span class="text-info fw-bold">19 笔 (总计 224 笔)</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2">
-                            <span>运输异常预警</span>
-                            <span class="badge bg-success">🟢 0 异常延误</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="stat-card">
-                        <h5 class="section-title">广告投放 (P4P)</h5>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>近7天广告商机数</span>
-                            <span class="text-warning fw-bold">1 条</span>
-                        </div>
-                        <div class="d-flex justify-content-between py-2 border-bottom border-secondary">
-                            <span>流量依赖度</span>
-                            <span class="text-warning">高度依赖自然搜索流</span>
-                        </div>
-                        <p class="text-dim small mt-2 mb-0">
-                            ⚠️ <strong>投放占比极低：</strong>目前广告商机仅占商机总量的1.1%。流量基本来自于高质量自然曝光。如需扩充流量池，建议开启P4P计划。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 趋势图表区 -->
+    <!-- Row 1: Key Metrics -->
     <div class="row g-3 mb-4">
-        <div class="col-md-6">
-            <div class="stat-card">
-                <h5 class="section-title">店铺点击率 (CTR) 7天趋势 (6.09 - 6.15)</h5>
-                <div class="chart-container">
-                    <canvas id="ctrChart"></canvas>
-                </div>
+        <div class="col-md-3">
+            <div class="stat-card text-center">
+                <div class="stat-label">昨日询盘 (6/14)</div>
+                <div class="stat-value">1</div>
+                <div class="stat-change change-up">100% 极速回复</div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="stat-card">
-                <h5 class="section-title">商机转化率 (访客→商机) 7天趋势 (6.09 - 6.15)</h5>
-                <div class="chart-container">
-                    <canvas id="convChart"></canvas>
-                </div>
+        <div class="col-md-3">
+            <div class="stat-card text-center">
+                <div class="stat-label">TM 咨询人数</div>
+                <div class="stat-value">12</div>
+                <div class="stat-change text-warning">全店商机人数 13 人</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card text-center">
+                <div class="stat-label">商机转化率 (7日)</div>
+                <div class="stat-value">7.02%</div>
+                <div class="stat-change change-up">↑ 40.4% 优于同行</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat-card text-center">
+                <div class="stat-label">近7天信保实收</div>
+                <div class="stat-value">$30,387</div>
+                <div class="stat-change change-up">🟢 远超同行优秀</div>
             </div>
         </div>
     </div>
 
-    <!-- 核心板块：重点客户谈判动态 & 决策代办 -->
     <div class="row g-3">
-        <!-- 重点客户谈判列表 (Top 10 完全版) -->
-        <div class="col-lg-8">
-            <div class="stat-card mb-3" id="buyerSection">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h5 class="section-title m-0">重点客户全生命周期谈判动态 (Top 10)</h5>
-                    <span class="text-dim small"><i class="bi bi-info-circle"></i> 点击客户行可展开查看<b>客户背调、IM会话明细及下发督办指令</b></span>
-                </div>
+        <!-- Row 2: Charts & Top Customers -->
+        <div class="col-md-8">
+            <div class="stat-card mb-3">
+                <h5 class="section-title">核心谈判动态 & 增量买家 (6/14)</h5>
                 <div class="table-responsive">
-                    <table class="table table-custom table-hover" id="buyerTable">
+                    <table class="table table-custom table-hover">
                         <thead>
                             <tr>
                                 <th>级别</th>
-                                <th>客户国家</th>
-                                <th>所属业务</th>
-                                <th>当前状态</th>
+                                <th>客户/国家</th>
+                                <th>主询产品</th>
                                 <th>预计金额</th>
                                 <th>成交概率</th>
-                                <th>CEO/待办 指令</th>
+                                <th>CEO 指令 / 最新跟进</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- 1. Alicia -->
-                            <tr onclick="toggleDetail('aliciaBeere')" id="row-aliciaBeere" class="blink-danger">
-                                <td><span class="badge badge-s">S</span></td>
-                                <td class="fw-bold">alicia Beere (UK)</td>
-                                <td>Theo Li (销售)</td>
-                                <td class="text-danger fw-bold"><i class="bi bi-exclamation-triangle-fill"></i> 打样工艺受阻，面临客诉</td>
-                                <td>$10,000+</td>
-                                <td class="text-danger fw-bold">50% (骤降)</td>
-                                <td class="text-warning">审批“印金+击凸”替代方案，出样片</td>
+                            <tr style="background-color: rgba(201, 160, 99, 0.05);">
+                                <td><span class="badge badge-a">A</span></td>
+                                <td><strong>Piotr Nowicki (PL)</strong></td>
+                                <td>石膏扩香片 & 香水瓶</td>
+                                <td>$3,000</td>
+                                <td>75%</td>
+                                <td class="text-warning">Elena秒回，需立即发空瓶图册及起订量报价</td>
                             </tr>
-                            <tr id="detail-aliciaBeere" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-aliciaBeere">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L2级 会员</div>
-                                                    <div class="spec-item"><span class="spec-label">主营品类：</span>高端香薰、蜡烛礼盒</div>
-                                                    <div class="spec-item"><span class="spec-label">核心痛点：</span>深蓝与金 (Navy & Gold) 品牌高质感</div>
-                                                    <div class="spec-item"><span class="spec-label">工艺瓶颈：</span>烫金物理限制五角星极细线条导致模糊，对工厂极不满意。</div>
-                                                    <div class="spec-item"><span class="spec-label">推荐替代：</span>印金 (Gold printing) + 局部击凸</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Theo Li 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column" id="chat-aliciaBeere">
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">I think I may want to change the design of the blue box I don't think the two blues look right. maybe the Heka symbol should be printed on the box in gold embossed.</div>
-                                                            <div class="chat-time">14:01:23</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">Do you have an ideal image?</div>
-                                                            <div class="chat-time">14:01:48</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">五角星这类细线条在起毛的 laminated 表面烫金会受力不均溢出。烫金是金属模具加热受压，无法做到这么细的尖锐边缘。</div>
-                                                            <div class="chat-time">14:16:11</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">I do NOT like at all what they have done ..maybe another printer would be best then if they are limited.. why didn't they say this before taking my sample money? 😠</div>
-                                                            <div class="chat-time">14:17:26</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">我们可以换用印金（Gold printing）工艺，它能完美解决尖锐边缘不溢出。我目前正在多方确认，明天前一定给您最佳的实物还原方案。</div>
-                                                            <div class="chat-time">14:24:57</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">the blue box is more premium and needs to reflect this. Navy and gold is a must 🙌🏽</div>
-                                                            <div class="chat-time">14:31:47</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-danger small" id="directive-aliciaBeere">审批“印金+击凸”替代方案，明天前出印金样片并安抚</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-aliciaBeere">
-                                                        <button class="btn btn-gold" onclick="updateDirective('aliciaBeere')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 2. Matt X -->
-                            <tr onclick="toggleDetail('mattX')" id="row-mattX" class="blink-warning">
+                            <tr>
                                 <td><span class="badge badge-s">S</span></td>
-                                <td class="fw-bold">Matt X (US)</td>
-                                <td>Amber Lee</td>
-                                <td class="text-warning fw-bold"><i class="bi bi-clock-history"></i> 船期已定，催要最新 PI</td>
+                                <td>Pooja Dhull (AU)</td>
+                                <td>12oz 烛台瓶</td>
+                                <td>$1,200</td>
+                                <td>95%</td>
+                                <td>信保已起草，盯紧 DDP 运费支付</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge badge-s">S</span></td>
+                                <td>Matt X (US)</td>
+                                <td>烛台/扩香</td>
                                 <td>$5,000+</td>
                                 <td>90%</td>
-                                <td class="text-danger">Amber动作慢，必须今晚发出PI</td>
+                                <td>老客返单，催促 Amber 下班前发 PI 确认</td>
                             </tr>
-                            <tr id="detail-mattX" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-mattX">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L3级 (核心大中型香薰商)</div>
-                                                    <div class="spec-item"><span class="spec-label">当前瓶颈：</span>货代订舱确认24号船期。客户财务急需更新版 PI 汇出款项。</div>
-                                                    <div class="spec-item"><span class="spec-label">延迟风险：</span>Amber 跟进反应有些慢，存在未及时发 PI 的滞后风险。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Amber Lee 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">你好，请问一下货代那边没问题的吧？另外能不能给我发一份更新的PI，我们财务需要</div>
-                                                            <div class="chat-time">11:18:56</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">你好Matt, 没有问题，今天早上我已经联系货代了，给她更新了booking，她预定的是24号的船期</div>
-                                                            <div class="chat-time">11:20:03</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">好的，我今天更新给您PI</div>
-                                                            <div class="chat-time">11:20:21</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">好的非常感谢</div>
-                                                            <div class="chat-time">11:20:55</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-danger small" id="directive-mattX">Amber动作慢，下班前反馈PI发出进度，确保财务顺利付汇</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-mattX">
-                                                        <button class="btn btn-gold" onclick="updateDirective('mattX')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 3. Pooja Dhull -->
-                            <tr onclick="toggleDetail('poojaDhull')" id="row-poojaDhull">
+                            <tr>
                                 <td><span class="badge badge-s">S</span></td>
-                                <td class="fw-bold">Pooja Dhull (AU)</td>
-                                <td>Elena Wang / Summer</td>
-                                <td class="text-success fw-bold"><i class="bi bi-check-circle-fill"></i> 信保单已起草，等付款</td>
-                                <td>$1,200</td>
-                                <td class="text-success">95%</td>
-                                <td class="text-warning">盯紧付款，2H内未付介入</td>
-                            </tr>
-                            <tr id="detail-poojaDhull" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-poojaDhull">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L2级 (澳大利亚中小采购商)</div>
-                                                    <div class="spec-item"><span class="spec-label">报价详情：</span>玻璃蜡烛罐 DDP 含税送门。运费 $700。交期开船后 30-35 天。</div>
-                                                    <div class="spec-item"><span class="spec-label">关联文件：</span><code>Yude 12oz glass jar quotation-Pooja Dhull260615.pdf</code></div>
-                                                    <div class="spec-item"><span class="spec-label">信保订单：</span>订单号 304281331501022799，发往 Australia, Quakers Hill。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Elena Wang 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">Hello Pooja, please check the quote. Shipping cost: $700 (DDP - tax-inclusive delivery to door). Delivery within 30-35 days after departure.</div>
-                                                            <div class="chat-time">14:04:09</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">📎 发送 PDF 文件：Yude 12oz glass jar quotation-Pooja Dhull260615.pdf</div>
-                                                            <div class="chat-time">14:04:15</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">💳 卖家起草信保订单：304281331501022799. 地址: New South Wales, Quakers Hill. 请查收付汇款。</div>
-                                                            <div class="chat-time">15:07:34</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-success small" id="directive-poojaDhull">盯紧付款，2H内未付介入提供付款指引</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-poojaDhull">
-                                                        <button class="btn btn-gold" onclick="updateDirective('poojaDhull')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 4. Akshay Shahani -->
-                            <tr onclick="toggleDetail('akshay')" id="row-akshay">
-                                <td><span class="badge badge-a">A</span></td>
-                                <td class="fw-bold">Akshay Shahani (US)</td>
-                                <td>Theo Li</td>
-                                <td class="text-info fw-bold"><i class="bi bi-send-check"></i> 报价已发，核实 FDA 中</td>
-                                <td>$3,250 - $13,750</td>
-                                <td>75%</td>
-                                <td class="text-light">Theo需立即发FDA证书/Excel报价</td>
-                            </tr>
-                            <tr id="detail-akshay" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-akshay">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L3级 (中大型饮用杯/包装杯买家)</div>
-                                                    <div class="spec-item"><span class="spec-label">定制内容：</span>用其专属单色 Logo 替换原有草莓图案。</div>
-                                                    <div class="spec-item"><span class="spec-label">阶梯报价：</span>1000个: $3.25 | 2000个: $3.05 | 5000个: $2.75 (FOB)</div>
-                                                    <div class="spec-item"><span class="spec-label">核心诉求：</span>必须确认是否能通过美国 FDA 食品接触级认证。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Theo Li 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">草莓图案将替换为我们的定制 Logo，请发报价。不需要包含复杂的Logo印制费（它是单色Logo，核算一个常规单价）。</div>
-                                                            <div class="chat-time">10:45:31</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">报价包含 1000/2000/5000 阶梯。</div>
-                                                            <div class="chat-time">10:59:32</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">1000 pcs FOB $3.25/pcs | 2000 pcs FOB $3.05/pcs | 5000 pcs FOB $2.75/pcs.</div>
-                                                            <div class="chat-time">11:46:40</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">能不能发一个 Excel 报价表？另外，这能过 FDA 吗？我们买来也是当饮用杯卖。</div>
-                                                            <div class="chat-time">11:51:22</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">📎 发送 PDF 报价文件：Akshay Shahani-Zibo Yude quotations.pdf。我们用的都是钠钙玻璃，符合食品级安全。下午上班我跟经理核对一下 FDA 报告。</div>
-                                                            <div class="chat-time">11:55:55</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">我们所有的玻璃器皿均为钠钙安全玻璃，完全通过 FDA 食品安全测试。</div>
-                                                            <div class="chat-time">13:56:30</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-warning small" id="directive-akshay">Theo下午需立即发送我司FDA钠钙玻璃证书PDF，并提供Excel版阶梯报价</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-akshay">
-                                                        <button class="btn btn-gold" onclick="updateDirective('akshay')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 5. Wejdan Alharbi -->
-                            <tr onclick="toggleDetail('wejdan')" id="row-wejdan" class="blink-warning">
-                                <td><span class="badge badge-a">A</span></td>
-                                <td class="fw-bold">Wejdan Alharbi (SA)</td>
-                                <td>Elena Wang</td>
-                                <td class="text-warning fw-bold"><i class="bi bi-gear-fill"></i> 开模成本高，说服拼版中</td>
-                                <td>$3,000+</td>
-                                <td>70% (拉锯中)</td>
-                                <td class="text-warning">催促寄送实物样，淄博地址开模</td>
-                            </tr>
-                            <tr id="detail-wejdan" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-wejdan">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L1级 (沙特阿拉伯初创设计品牌)</div>
-                                                    <div class="spec-item"><span class="spec-label">痛点分析：</span>首单预算低 (5000个)。独立模具费用高达 $4,500 且正常开机起订量 30,000 个，对其极其不经济。</div>
-                                                    <div class="spec-item"><span class="spec-label">折中方案：</span>引导推荐类似公版模具，或在公版基础上改动浮雕/图案，拼版生产（湊30,000起开）。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Elena Wang 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">最接近的公版模具是 D9H10cm。如果开私模，模具费为 4500 USD，且起订量 30,000 个。</div>
-                                                            <div class="chat-time">12:02:17</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">为什么要 30,000 个？数量实在是太庞大了。我首单最多 5,000 个，并且在杯身要有雕刻，加上后期发光设计。有什么最小量建议吗？</div>
-                                                            <div class="chat-time">15:21:54</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">我们刚跟生产总监争取了拼版生产方案（Gangs Run）：我们可以接受 5000 个起订。但需要跟其他订单组合凑足3万运行，且单价会偏高。另外在没有见到实物样前我们无法准确报价。</div>
-                                                            <div class="chat-time">15:27:26</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">这是我们淄博公司的地址：山东省淄博市张店区北京路国贸大厦B座1801室，您可以将实物样寄到这里，我们进行开模评估。</div>
-                                                            <div class="chat-time">15:35:09</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-danger small" id="directive-wejdan">催促沙特客户用DHL寄送实物样到淄博，跟踪WhatsApp进度谨防流失</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-wejdan">
-                                                        <button class="btn btn-gold" onclick="updateDirective('wejdan')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 6. Danni Robinson -->
-                            <tr onclick="toggleDetail('danni')" id="row-danni">
-                                <td><span class="badge badge-b">B</span></td>
-                                <td class="fw-bold">Danni Robinson (AU)</td>
-                                <td>Theo Li</td>
-                                <td class="text-info fw-bold"><i class="bi bi-file-earmark-pdf-fill"></i> 现货试样，待转3D STL</td>
-                                <td>$1,500 - $3,000</td>
+                                <td>Alicia Beere (UK)</td>
+                                <td>深蓝金香薰盒</td>
+                                <td>$10,000+</td>
                                 <td>80%</td>
-                                <td class="text-light">下午需报出模具费/样品费，转STL</td>
+                                <td>烫金有局限，拉设计师定印金方案</td>
                             </tr>
-                            <tr id="detail-danni" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-danni">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L2级 (澳大利亚石膏挂件试样商)</div>
-                                                    <div class="spec-item"><span class="spec-label">主要需求：</span>标准9x6cm超薄石膏挂件，定制香型。</div>
-                                                    <div class="spec-item"><span class="spec-label">选用现货：</span>Morning Sea Breeze, White Magnolia, Hilton, Papaya/orange.</div>
-                                                    <div class="spec-item"><span class="spec-label">技术诉求：</span>客户只有 PDF 规格图，需要我司设计师转成开模所需的 3D STL 文件。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Theo Li 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">想要类似这种定制石膏香气挂件，长度 6-8cm 左右。</div>
-                                                            <div class="chat-time">10:40:52</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">📎 发送香型清单：石膏香味中英文版(1).pdf。起订量 500 个，可随图定制。</div>
-                                                            <div class="chat-time">10:47:18</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">我想用 9x6cm 规格。想先针对 Morning Sea Breeze, White Magnolia, Hilton, Papaya / orange 进行气味试样。</div>
-                                                            <div class="chat-time">11:19:52</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">但我只有一份 PDF 图纸，你们设计师能帮我转成 3D 开模的 STL 文件吗？我的 WhatsApp 是 +61 0400441758。</div>
-                                                            <div class="chat-time">12:28:57</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">可以处理的，我们设计师能做。我下午就把模具费和打样费整体算好发给你。请把 PDF 图纸先发过来。</div>
-                                                            <div class="chat-time">13:38:39</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-warning small" id="directive-danni">下午下班前必须向客户发出首单模具和样品费报价，协调设计转STL图纸</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-danni">
-                                                        <button class="btn btn-gold" onclick="updateDirective('danni')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 7. Li Ricky -->
-                            <tr onclick="toggleDetail('liricky')" id="row-liRicky">
-                                <td><span class="badge badge-b">B</span></td>
-                                <td class="fw-bold">Li Ricky (CN)</td>
-                                <td>Theo Li</td>
-                                <td class="text-info fw-bold"><i class="bi bi-calculator"></i> 内贸拼箱，含税运核算中</td>
-                                <td>￥12,000 - ￥25,000</td>
+                            <tr>
+                                <td><span class="badge badge-a">A</span></td>
+                                <td>Wejdan (SA)</td>
+                                <td>特殊发光玻璃罐</td>
+                                <td>$3,000</td>
                                 <td>70%</td>
-                                <td class="text-light">下午计算含13%专票/运送到青岛价</td>
-                            </tr>
-                            <tr id="detail-liricky" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-liricky">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家属性：</span>国内分销/出口拼箱渠道商</div>
-                                                    <div class="spec-item"><span class="spec-label">产品工艺：</span>竹盖高硼硅玻璃饭盒（激光雕刻1处 Logo）。</div>
-                                                    <div class="spec-item"><span class="spec-label">主要需求：</span>1000和2000个的人民币阶梯报价。要求开 13% 增值税专用发票、含包装和送至青岛港运费。</div>
-                                                    <div class="spec-item"><span class="spec-label">待出数据：</span>打样费、打样及大货时间、外箱规格、箱毛重。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Theo Li 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">盖子是竹子，盒身玻璃，盖子要激光刻一处 Logo。1000-2000个可以做吗？</div>
-                                                            <div class="chat-time">15:13:43</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">都可以做的，看您需求。我们现有钠钙和高硼硅两种材质。您需要哪种？</div>
-                                                            <div class="chat-time">15:16:22</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">现有是什么材质？请帮我算下 13个专票、运费常规包装送到青岛的人民币含税运总价。另外需要提供打样费、打样大货时间、外箱规格、装箱数和装箱毛重。</div>
-                                                            <div class="chat-time">15:25:07</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-warning small" id="directive-liricky">尽快计算竹盖高硼硅饭盒含13%专票、包装运送至青岛的人民币报价</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-liricky">
-                                                        <button class="btn btn-gold" onclick="updateDirective('liricky')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 8. Jack Stevenson -->
-                            <tr onclick="toggleDetail('jack')" id="row-jack">
-                                <td><span class="badge badge-b">B</span></td>
-                                <td class="fw-bold">Jack Stevenson (US)</td>
-                                <td>Elena Wang</td>
-                                <td class="text-dim"><i class="bi bi-hourglass-split"></i> 规格引流中，等待回复</td>
-                                <td>$4,000</td>
-                                <td>60%</td>
-                                <td class="text-light">多尺寸引流，推荐经典 8.5cm</td>
-                            </tr>
-                            <tr id="detail-jack" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-jack">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L3级 会员</div>
-                                                    <div class="spec-item"><span class="spec-label">当前瓶颈：</span>Summer分配给Elena。已提供实物图，正在确认尺寸方案。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Elena Wang 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">📎 发送蜡烛罐高清细节图</div>
-                                                            <div class="chat-time">08:52:04</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">Hello Jack, this product comes in multiple sizes. Which one would you like to order? We offer three diameters: 6.5 cm, 8.5 cm, and 10 cm.</div>
-                                                            <div class="chat-time">09:14:37</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-dim small" id="directive-jack">建议主动推荐经典大卖 8.5cm (8oz) 直径，促使其确认细节</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-jack">
-                                                        <button class="btn btn-gold" onclick="updateDirective('jack')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 9. Celeste Phox -->
-                            <tr onclick="toggleDetail('celeste')" id="row-celeste">
-                                <td><span class="badge badge-b">B</span></td>
-                                <td class="fw-bold">Celeste Phox (US)</td>
-                                <td>Elena Wang</td>
-                                <td class="text-dim"><i class="bi bi-tag-fill"></i> 引导带导流口现货</td>
-                                <td>$1,500</td>
-                                <td>65%</td>
-                                <td class="text-light">引导寄样，现货可免费提供2个样品</td>
-                            </tr>
-                            <tr id="detail-celeste" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-celeste">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L1级 会员</div>
-                                                    <div class="spec-item"><span class="spec-label">痛点解决：</span>极光圆底色缺货，MOQ过高。成功引导至热销经典带导流口蜡烛罐（现货起订低）。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Elena Wang 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">对幻彩极光底玻璃蜡烛罐感兴趣。</div>
-                                                            <div class="chat-time">14:29:11</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">极光色目前缺货需重新定制，起订量 500 个每色。建议您看看这款更适合的带导流口经典玻璃蜡烛罐。</div>
-                                                            <div class="chat-time">14:30:22</div>
-                                                        </div>
-                                                        <div class="chat-bubble buyer">
-                                                            <div class="chat-content">那这款圆柱经典带导流口的蜡烛罐，起订量和价格呢？</div>
-                                                            <div class="chat-time">14:31:27</div>
-                                                        </div>
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">清光透明款：起订 250个，EXW 单价 $1.29。黑色款：起订 500个，EXW $1.39。</div>
-                                                            <div class="chat-time">14:40:13</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-dim small" id="directive-celeste">现货样品可免样品费提供2个，引导客户先支付邮费寄样确认品质</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-celeste">
-                                                        <button class="btn btn-gold" onclick="updateDirective('celeste')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- 10. Victoria vacher -->
-                            <tr onclick="toggleDetail('victoria')" id="row-victoria">
-                                <td><span class="badge badge-b">B</span></td>
-                                <td class="fw-bold">Victoria vacher (FR)</td>
-                                <td>Stephen Zhang</td>
-                                <td class="text-dim"><i class="bi bi-truck"></i> 样品已寄出，状态跟进中</td>
-                                <td>$800</td>
-                                <td>55%</td>
-                                <td class="text-light">按样品SOP收货3天内必须电联反馈</td>
-                            </tr>
-                            <tr id="detail-victoria" class="detail-row">
-                                <td colspan="7" class="p-0">
-                                    <div class="detail-pane" id="pane-victoria">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-3"><i class="bi bi-person-bounding-box"></i> 客户画像 (BI)</h6>
-                                                    <div class="spec-item"><span class="spec-label">买家等级：</span>L1级 初创买家</div>
-                                                    <div class="spec-item"><span class="spec-label">当前瓶颈：</span>样品包已寄送。Stephen 正在例行核实跟进样品接收与外观/香气品质反馈。</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-chat-text"></i> IM 真实会话明细 (Stephen Zhang 导出)</h6>
-                                                    <div class="chat-container-inner d-flex flex-column">
-                                                        <div class="chat-bubble seller">
-                                                            <div class="chat-content">Hi, dear~ Have you received the sample package? Looking forward to your scent and texture feedback.</div>
-                                                            <div class="chat-time">08:38:05</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="bi-card">
-                                                    <h6 class="text-warning mb-2"><i class="bi bi-vector-pen"></i> CEO 指令下发</h6>
-                                                    <div class="mb-2">
-                                                        <span class="spec-label">当前指令：</span>
-                                                        <p class="text-dim small" id="directive-victoria">按样品SOP跟单。一旦签收，24h内主动电联，索要香型测试报告</p>
-                                                    </div>
-                                                    <div class="input-group input-group-sm">
-                                                        <input type="text" class="form-control bg-dark text-main border-secondary" placeholder="输入新的批示..." id="input-victoria">
-                                                        <button class="btn btn-gold" onclick="updateDirective('victoria')">下发</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
+                                <td>成功降低工厂MOQ至5k，催促寄送实物样开模</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+
+            <div class="stat-card">
+                <h5 class="section-title">核心运营趋势 (近7天)</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="chart-container">
+                            <canvas id="ctrChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="chart-container">
+                            <canvas id="convChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- 侧边栏：待办 & 风险 -->
-        <div class="col-lg-4">
-            <!-- 督办卡片 -->
+        <!-- Sidebar: To-do & Risks -->
+        <div class="col-md-4">
             <div class="stat-card mb-3 todo-list">
-                <h5 class="section-title text-warning">
-                    <span><i class="bi bi-check2-square"></i> Boss 今日高优督办</span>
-                    <span class="badge bg-danger small" style="font-size:0.7rem;">今日急件</span>
-                </h5>
-                <div class="todo-item high-priority">
-                    <span class="fw-bold text-danger">1. [S级-Alicia] 审批替代方案</span>
-                    <p class="text-dim small m-0 mt-1">审批“印金+击凸”替代方案，要求 Theo 明天下班前做出印金样片并安抚买家对前期工艺隐瞒的情绪。</p>
-                </div>
-                <div class="todo-item high-priority">
-                    <span class="fw-bold text-danger">2. [S级-Matt X] 督促更新PI</span>
-                    <p class="text-dim small m-0 mt-1">强力核实业务员 Amber 是否已将最新版 PI 发送给买家财务。Matt 已订船期催款急，不容延迟！</p>
-                </div>
-                <div class="todo-item">
-                    <span class="fw-bold">3. [老客激活] 19:00 老客激活核查</span>
-                    <p class="text-dim small m-0 mt-1">检查今晚 19:00 前 6 名老客的重新激活跟进及话术发送历史。</p>
-                </div>
-                <div class="todo-item">
-                    <span class="fw-bold">4. [资源沉淀] 专票与检测包标准化</span>
-                    <p class="text-dim small m-0 mt-1">整理并标准化 FDA、13%专票、资质报告等“一键秒发”销售包，提高前台人员响应时效。</p>
-                </div>
+                <h5 class="section-title">Boss 今日待办 (6/15)</h5>
+                <div class="todo-item">1. 检查 Elena 是否已向新客 Piotr 发送香水瓶报价</div>
+                <div class="todo-item">2. 审批 Alicia Beere “印金+击凸”替代方案成本</div>
+                <div class="todo-item">3. 督促 619 个“潜力商品”的定价优化，冲刺爆品</div>
+                <div class="todo-item">4. 检查 Stephen 是否完成“10天未发货订单”质检核对</div>
             </div>
 
-            <!-- 风控预警 -->
             <div class="stat-card mb-3">
-                <h5 class="section-title text-danger">
-                    <span><i class="bi bi-shield-fill-exclamation"></i> 风险雷达中心</span>
-                </h5>
-                <div class="p-2 mb-2 rounded" style="background-color: rgba(248, 81, 73, 0.08); border-left: 3px solid var(--danger-red);">
-                    <span class="text-danger fw-bold small">● Alicia Beere 烫金工艺物理失败 (高风险)</span>
-                    <p class="text-dim small m-0 mt-1">工厂因纸质 laminated 特性烫细线起毛模糊。客户极其愤怒，指责前期交样品费没被告知，面临大货退单风险。</p>
-                </div>
-                <div class="p-2 mb-2 rounded" style="background-color: rgba(210, 153, 34, 0.08); border-left: 3px solid var(--warning-orange);">
-                    <span class="text-warning fw-bold small">● Matt X 更新版 PI 发送滞后 (中风险)</span>
-                    <p class="text-dim small m-0 mt-1">货代已订舱。客户已催收，Amber未反馈 PI 进展，跟进不积极导致汇款延迟。</p>
-                </div>
-                <div class="p-2 mb-2 rounded" style="background-color: rgba(210, 153, 34, 0.05); border-left: 3px solid var(--warning-orange);">
-                    <span class="text-warning fw-bold small">● 业务员 Amber 平均回复时长超 7min</span>
-                    <p class="text-dim small m-0 mt-1">IM 诊断雷达指出，其部分会话回复慢，极易造成询盘转化率下滑。</p>
-                </div>
-                <div class="p-2 rounded" style="background-color: rgba(210, 153, 34, 0.05); border-left: 3px solid var(--warning-orange);">
-                    <span class="text-warning fw-bold small">● Wejdan 沙特买家模具与起订博弈中</span>
-                    <p class="text-dim small m-0 mt-1">4500刀开模与3万起订过高，已妥协拼版，需在WhatsApp死死粘住，防范转投1688竞品。</p>
-                </div>
+                <h5 class="section-title">风险预警中心</h5>
+                <p class="text-danger m-1">● 待发货订单超 10 天提醒 (中风险)</p>
+                <p class="text-danger m-1">● 爆品商品数暂为 0，曝光Top10中7个零反馈 (高风险)</p>
+                <p class="text-warning m-1">● 店铺 5 分钟回复率 53.89%，仍有提效空间</p>
+                <p class="text-warning m-1">● 物流运输中 19 笔，其中 2 笔投递失败需货代介入</p>
             </div>
 
-            <!-- 战斗力排行榜 -->
             <div class="stat-card">
-                <h5 class="section-title text-success">
-                    <span><i class="bi bi-trophy-fill"></i> 销售实时战斗力排行</span>
-                </h5>
+                <h5 class="section-title">业务员跟进红榜 (6/14)</h5>
                 <div class="d-flex justify-content-between align-items-center border-bottom border-secondary py-2">
-                    <div>
-                        <span class="fw-bold">🥇 Theo Li</span>
-                        <p class="text-dim small m-0">今日: 6 询盘 / 3 订单意向 (Alicia, Akshay, Danni)</p>
-                    </div>
-                    <span class="text-warning">★★★★★ <span class="badge bg-success small">销冠</span></span>
+                    <span>Elena Wang (1 询盘 / 8秒秒回)</span>
+                    <span class="text-warning">★★★★★</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center border-bottom border-secondary py-2">
-                    <div>
-                        <span class="fw-bold">🥈 Elena Wang</span>
-                        <p class="text-dim small m-0">今日: 4 询盘 / 100% 极速回复 (Pooja, Wejdan, Jack)</p>
-                    </div>
-                    <span class="text-warning">★★★★★ <span class="badge bg-secondary small">极速</span></span>
-                </div>
-                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary py-2">
-                    <div>
-                        <span class="fw-bold">🥉 Amber Lee</span>
-                        <p class="text-dim small m-0">今日: 4 询盘 / 75% 极速回复 (Matt X, Saad)</p>
-                    </div>
-                    <span class="text-warning">★★★★ <span class="badge bg-dark small">稳健</span></span>
+                    <span>Theo Li (老客盘活 / 强调 RoHS 认证)</span>
+                    <span class="text-warning">★★★★★</span>
                 </div>
                 <div class="d-flex justify-content-between align-items-center py-2">
-                    <div>
-                        <span class="fw-bold">Stephen Zhang</span>
-                        <p class="text-dim small m-0">今日: 1 询盘 / 100% 极速跟进 (Victoria)</p>
-                    </div>
-                    <span class="text-warning">★★★★ <span class="badge bg-dark small">正常</span></span>
+                    <span>Stephen (处理超期订单 / 关怀新客)</span>
+                    <span class="text-warning">★★★★</span>
                 </div>
             </div>
         </div>
@@ -1371,156 +259,45 @@
 </div>
 
 <script>
-    // 1. 初始化图表
     const chartOptions = {
         responsive: true,
         maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
-            y: { grid: { color: '#21262d' }, ticks: { color: '#848d97', font: { size: 10 } } },
-            x: { grid: { display: false }, ticks: { color: '#848d97', font: { size: 10 } } }
+            y: { grid: { color: '#30363d' }, ticks: { color: '#848d97' } },
+            x: { grid: { display: false }, ticks: { color: '#848d97' } }
         }
     };
 
-    // CTR 趋势 (6.13 为 2.22%，超越同行优秀的2.11%)
     new Chart(document.getElementById('ctrChart'), {
         type: 'line',
         data: {
-            labels: ['6.09', '6.10', '6.11', '6.12', '6.13', '6.14', '6.15'],
+            labels: ['6.08', '6.09', '6.10', '6.11', '6.12', '6.13', '6.14'],
             datasets: [{
                 label: 'CTR (%)',
-                data: [1.80, 1.95, 2.01, 2.08, 2.22, 2.15, 2.22],
+                data: [1.8, 1.9, 2.0, 2.1, 2.22, 2.15, 2.22],
                 borderColor: '#c9a063',
                 backgroundColor: 'rgba(201, 160, 99, 0.1)',
                 fill: true,
-                tension: 0.35,
-                borderWidth: 2.5,
-                pointRadius: 4,
-                pointBackgroundColor: '#c9a063'
+                tension: 0.4
             }]
         },
-        options: { ...chartOptions, plugins: { title: { display: true, text: '点击率 (CTR) 趋势 | T-2数据点: 2.22%', color: '#e6edf3', font: { size: 12, weight: 'bold' } } } }
+        options: { ...chartOptions, plugins: { title: { display: true, text: '店铺点击率 (CTR) 趋势', color: '#e6edf3' } } }
     });
 
-    // 转化率 趋势 (6.13 达到峰值 7.51%)
     new Chart(document.getElementById('convChart'), {
         type: 'bar',
         data: {
-            labels: ['6.09', '6.10', '6.11', '6.12', '6.13', '6.14', '6.15'],
+            labels: ['6.08', '6.09', '6.10', '6.11', '6.12', '6.13', '6.14'],
             datasets: [{
-                label: '商机转化率 (%)',
-                data: [4.5, 5.2, 5.8, 6.1, 7.51, 6.9, 7.51],
+                label: '转化率 (%)',
+                data: [4.5, 5.0, 5.2, 5.8, 7.51, 6.9, 7.02],
                 backgroundColor: '#238636',
-                borderRadius: 4,
-                barThickness: 16
+                borderRadius: 4
             }]
         },
-        options: { ...chartOptions, plugins: { title: { display: true, text: '商机转化率 (访客→商机) | 6.13峰值: 7.51%', color: '#e6edf3', font: { size: 12, weight: 'bold' } } } }
+        options: { ...chartOptions, plugins: { title: { display: true, text: '商机转化率 趋势', color: '#e6edf3' } } }
     });
-
-    // 2. 重点客户详情展开机制
-    let activePaneId = null;
-    function toggleDetail(buyerId) {
-        const pane = document.getElementById('pane-' + buyerId);
-        const detailRow = document.getElementById('detail-' + buyerId);
-        
-        if (activePaneId && activePaneId !== buyerId) {
-            // 先关闭之前展开的
-            document.getElementById('pane-' + activePaneId).style.display = 'none';
-            document.getElementById('detail-' + activePaneId).style.display = 'none';
-        }
-        
-        if (pane.style.display === 'block') {
-            pane.style.display = 'none';
-            detailRow.style.display = 'none';
-            activePaneId = null;
-        } else {
-            pane.style.display = 'block';
-            detailRow.style.display = 'table-row';
-            activePaneId = buyerId;
-            // 自动滚动到对应可视区
-            detailRow.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-    }
-
-    // 3. 一键下达 CEO 专属决策批示并实时呈现在列表中
-    function updateDirective(buyerId) {
-        const inputVal = document.getElementById('input-' + buyerId).value;
-        if (!inputVal.trim()) {
-            alert("请输入批示内容！");
-            return;
-        }
-        // 更新展开面板内的文字
-        document.getElementById('directive-' + buyerId).innerText = inputVal;
-        
-        // 更新表格行上显示的“CEO 指令”列文字
-        const row = document.getElementById('row-' + buyerId);
-        const directiveCell = row.cells[6];
-        directiveCell.innerHTML = `<span class="text-warning fw-bold"><i class="bi bi-send-fill"></i> ${inputVal}</span>`;
-        
-        // 模拟批示已同步 OKKI CRM 成功提示
-        alert(`🎉 CEO指令下达成功！已同步OKKI CRM跟进记录，并推送到销售业务员。`);
-        document.getElementById('input-' + buyerId).value = "";
-    }
-
-    // 4. 老板一键概览模式 Toggle (Boss Command Mode)
-    let bossModeActive = false;
-    function toggleBossMode() {
-        bossModeActive = !bossModeActive;
-        const btn = document.getElementById('bossToggleBtn');
-        const body = document.body;
-        const rows = document.querySelectorAll('#buyerTable tbody tr');
-        
-        if (bossModeActive) {
-            btn.classList.add('active');
-            btn.innerHTML = `<i class="bi bi-lightning-fill"></i> 退出老板模式`;
-            body.classList.add('boss-active');
-            
-            // 自动折叠非高优/非风险行，只高亮显示有重大工艺和PI风险的客户行 (Alicia, Matt X)
-            rows.forEach(row => {
-                if (row.classList.contains('detail-row')) {
-                    row.style.display = 'none';
-                    return;
-                }
-                const rowId = row.id;
-                if (rowId === 'row-aliciaBeere' || rowId === 'row-mattX' || rowId === 'row-wejdan') {
-                    row.style.display = 'table-row';
-                    // 加上强闪烁视觉特效
-                    row.style.boxShadow = '0 0 15px rgba(248, 81, 73, 0.25) inset';
-                } else {
-                    // 其他正常没有高危待办的行淡化或临时隐藏，让老板一键直击公司命门
-                    row.style.opacity = '0.35';
-                }
-            });
-            // 自动把最高优先级的 Alicia 展开
-            toggleDetail('aliciaBeere');
-            
-            // 播放老板模式开启音效或通知提示
-            console.log("Boss commander mode activated.");
-        } else {
-            btn.classList.remove('active');
-            btn.innerHTML = `<i class="bi bi-lightning-charge-fill"></i> 老板一键概览模式`;
-            body.classList.remove('boss-active');
-            
-            // 恢复所有行的初始状态
-            rows.forEach(row => {
-                if (row.classList.contains('detail-row')) {
-                    row.style.display = 'none';
-                    return;
-                }
-                row.style.display = 'table-row';
-                row.style.opacity = '1';
-                row.style.boxShadow = 'none';
-            });
-            
-            // 关闭展开的手风琴
-            if (activePaneId) {
-                document.getElementById('pane-' + activePaneId).style.display = 'none';
-                document.getElementById('detail-' + activePaneId).style.display = 'none';
-                activePaneId = null;
-            }
-        }
-    }
 </script>
 
 </body>
