@@ -336,7 +336,7 @@
                 <h3 class="dashboard-title m-0">煜德商贸 · CEO 智能驾驶舱</h3>
             </div>
             <p class="text-dim m-0 mt-1 small">
-                <i class="bi bi-clock"></i> 数据更新时间：2026-06-17 08:30 | <i class="bi bi-currency-exchange"></i> 汇率：1 USD = 7.25 CNY | 数据口径：T-2 (2026-06-15)
+                <i class="bi bi-clock"></i> 数据更新时间：2026-06-16 08:30 | <i class="bi bi-currency-exchange"></i> 汇率：1 USD = 7.25 CNY | 数据口径：T-2 (2026-06-14)
             </p>
         </div>
         <div class="d-flex align-items-center gap-3">
@@ -1386,7 +1386,7 @@
     new Chart(document.getElementById('ctrChart'), {
         type: 'line',
         data: {
-            labels: ['6.11', '6.12', '6.13', '6.14', '6.15', '6.16', '6.17'],
+            labels: ['6.10', '6.11', '6.12', '6.13', '6.14', '6.15', '6.16'],
             datasets: [{
                 label: 'CTR (%)',
                 data: [2.01, 2.08, 2.22, 2.15, 2.18, 2.15, 2.18],
@@ -1402,11 +1402,11 @@
         options: { ...chartOptions, plugins: { title: { display: true, text: '点击率 (CTR) 趋势 | T-2数据点: 2.18%', color: '#e6edf3', font: { size: 12, weight: 'bold' } } } }
     });
 
-    // 转化率 趋势 (6.15 达到峰值 19.51%)
+    // 转化率 趋势 (6.14 达到峰值 19.51%)
     new Chart(document.getElementById('convChart'), {
         type: 'bar',
         data: {
-            labels: ['6.11', '6.12', '6.13', '6.14', '6.15', '6.16', '6.17'],
+            labels: ['6.10', '6.11', '6.12', '6.13', '6.14', '6.15', '6.16'],
             datasets: [{
                 label: '商机转化率 (%)',
                 data: [5.8, 6.1, 7.51, 7.02, 19.51, 18.0, 19.51],
@@ -1415,7 +1415,7 @@
                 barThickness: 16
             }]
         },
-        options: { ...chartOptions, plugins: { title: { display: true, text: '商机转化率 (访客→商机) | 6.15峰值: 19.51%', color: '#e6edf3', font: { size: 12, weight: 'bold' } } } }
+        options: { ...chartOptions, plugins: { title: { display: true, text: '商机转化率 (访客→商机) | 6.14峰值: 19.51%', color: '#e6edf3', font: { size: 12, weight: 'bold' } } } }
     });
 
     // 2. 重点客户详情展开机制
