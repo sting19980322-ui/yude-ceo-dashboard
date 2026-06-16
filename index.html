@@ -371,6 +371,9 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="oper-tab" data-bs-toggle="tab" data-bs-target="#oper" type="button" role="tab"><i class="bi bi-cpu"></i> 运营与广告诊断</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="crm-tab" data-bs-toggle="tab" data-bs-target="#crm-panel" type="button" role="tab"><i class="bi bi-shield-fill-exclamation"></i> CRM 风险雷达与绩效排行</button>
+                </li>
             </ul>
         </div>
     </div>
@@ -604,6 +607,210 @@
                         <p class="text-dim small mt-2 mb-0">
                             ⚠️ <strong>投放占比极低：</strong>目前广告商机仅占商机总量的1.1%。流量基本来自于高质量自然曝光。如需扩充流量池，建议开启P4P计划。
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. CRM 风险雷达与绩效 -->
+        <div class="tab-pane fade" id="crm-panel" role="tabpanel">
+            <div class="row g-3 mb-4">
+                <!-- 业务员多维接待排行榜 -->
+                <div class="col-12">
+                    <div class="stat-card">
+                        <h5 class="section-title text-success m-0 mb-3">
+                            <span><i class="bi bi-trophy-fill"></i> 全店销售接待效率与成交红黑排行榜 (统计区间: 6.08 - 6.15)</span>
+                        </h5>
+                        <div class="table-responsive">
+                            <table class="table table-custom table-hover text-center align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>综合排名</th>
+                                        <th>业务员姓名</th>
+                                        <th>分配新买家</th>
+                                        <th>5分钟回复率</th>
+                                        <th>平均回复时长</th>
+                                        <th>深度会话率 (Ab3)</th>
+                                        <th>跟单/跟进数</th>
+                                        <th>信保成交笔数</th>
+                                        <th>成交转化率</th>
+                                        <th>综合管理质检评定</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="background-color: rgba(35, 134, 54, 0.05);">
+                                        <td class="fw-bold text-success"><i class="bi bi-award-fill fs-5"></i> 1 (🏆 销冠)</td>
+                                        <td class="fw-bold">Elena Wang</td>
+                                        <td>364 人</td>
+                                        <td class="text-success fw-bold">78.24%</td>
+                                        <td class="text-success fw-bold">0.76 小时</td>
+                                        <td class="fw-bold text-warning">68.99%</td>
+                                        <td>162 次</td>
+                                        <td class="text-success fw-bold">16 笔</td>
+                                        <td class="text-success fw-bold">35.6%</td>
+                                        <td><span class="badge bg-success">🟢 极速全能销冠</span> 接待高效，转化突出。大客户质检有3次轻微风险。</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-warning">2</td>
+                                        <td class="fw-bold">Summer Zhao</td>
+                                        <td>49 人</td>
+                                        <td>62.41%</td>
+                                        <td>3.28 小时</td>
+                                        <td>46.69%</td>
+                                        <td>18 次</td>
+                                        <td>6 笔</td>
+                                        <td class="text-success fw-bold">50.0%</td>
+                                        <td><span class="badge bg-warning text-dark">🟡 转化稳健老将</span> 成交率极高，但平均首响较慢。需增加在线频次。</td>
+                                    </tr>
+                                    <tr style="background-color: rgba(248, 81, 73, 0.04);">
+                                        <td class="fw-bold text-danger">3 (🔴 预警)</td>
+                                        <td class="fw-bold">Amber Lee</td>
+                                        <td>44 人</td>
+                                        <td class="text-danger fw-bold">36.76%</td>
+                                        <td class="text-danger fw-bold">4.44 小时</td>
+                                        <td class="text-success fw-bold">61.41%</td>
+                                        <td>34 次</td>
+                                        <td>4 笔</td>
+                                        <td class="text-success fw-bold">57.1% (组冠)</td>
+                                        <td><span class="badge bg-danger">🔴 回复极其拖延</span> 聊天深度和成交率极高，但首响太慢导致大量新客黄金期流失。</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-dim">4</td>
+                                        <td class="fw-bold">Theo Li</td>
+                                        <td>344 人</td>
+                                        <td>43.65%</td>
+                                        <td>2.34 小时</td>
+                                        <td>40.33%</td>
+                                        <td>0 次</td>
+                                        <td>0 笔</td>
+                                        <td>0.0%</td>
+                                        <td><span class="badge bg-warning text-dark">🟡 负重承载过度</span> 分配极高。因处理Alicia重大工艺单精力耗尽。超时严重，需减负。</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-dim">5</td>
+                                        <td class="fw-bold">Stephen Zhang</td>
+                                        <td>201 人</td>
+                                        <td>51.51%</td>
+                                        <td>1.89 小时</td>
+                                        <td>43.83%</td>
+                                        <td>0 次</td>
+                                        <td>0 笔</td>
+                                        <td>0.0%</td>
+                                        <td><span class="badge bg-dark">🟡 接待机械平庸</span> 基础回复正常，大客留存和成交促成欠缺，需加强培训。</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 核心板块：致命风控预警中心 -->
+            <div class="row g-3">
+                <!-- 1. 48h未回复与报价挂起 -->
+                <div class="col-lg-6">
+                    <div class="stat-card h-100" style="border-color: var(--danger-red);">
+                        <h5 class="section-title text-danger mb-3">
+                            <span><i class="bi bi-shield-fill-x"></i> 重特大业务事故 (48h以上未回复 & 报价拖延)</span>
+                            <span class="badge bg-danger">极危</span>
+                        </h5>
+                        
+                        <!-- 事故 1 -->
+                        <div class="p-3 mb-3 rounded" style="background-color: rgba(248, 81, 73, 0.08); border: 1px solid rgba(248, 81, 73, 0.2);">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-bold text-danger"><i class="bi bi-exclamation-octagon-fill"></i> Assistant Eva (Katie Dare) - 26条未读</span>
+                                <span class="badge bg-danger">未回复超3天</span>
+                            </div>
+                            <p class="small text-main m-0"><strong>负责销售</strong>：Sara Li | <strong>最后活跃</strong>：2026-06-12 19:34:37</p>
+                            <p class="small text-dim mt-2 m-0"><strong>事故诊断</strong>：买家连续触发了 **26 条未读系统和重回提醒消息**，销售 Sara Li 居然彻底装聋作哑，造成恶性漏单，面临买家永久流失与阿里信誉严重降权。</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=278505947&activeAccountIdEncrypt=MC1IDX18LS3o1wKdjhms8FKZjgi59yKHqae5ywAMD9J5dRYAennSjYfphxRssrAVkPfVoZr" target="_blank" class="btn btn-sm btn-outline-danger"><i class="bi bi-box-arrow-up-right"></i> 直达积压会话</a>
+                                <button class="btn btn-sm btn-gold" onclick="alert(\'已向Sara Li下发顶格处罚警告！并抄送其业务导师。\')">一键发出红牌警告</button>
+                            </div>
+                        </div>
+
+                        <!-- 事故 2 -->
+                        <div class="p-3 mb-3 rounded" style="background-color: rgba(248, 81, 73, 0.05); border: 1px solid rgba(248, 81, 73, 0.15);">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-bold text-danger"><i class="bi bi-exclamation-triangle-fill"></i> happy Dadang - 500个询价拖延7天未报价</span>
+                                <span class="badge bg-danger">未报价 7天</span>
+                            </div>
+                            <p class="small text-main m-0"><strong>负责销售</strong>：Elena Wang | <strong>最后活跃</strong>：2026-06-09 16:55:41</p>
+                            <p class="small text-dim mt-2 m-0"><strong>事故诊断</strong>：买家于 6/9 正式询价 500 个大货。Elena 承诺“算价需要点时间我尽快回复”，随后**整整 7 天彻底断联**，完全把报价单遗忘！</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=7018990881&activeAccountIdEncrypt=MC1IDX19mj_ByDpTYwIJYBgcNV-7UPYOpLDQOyxavdNVc_cdS6Cefq-7upy_3awTCYTfFI7" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-box-arrow-up-right"></i> 直达会话</a>
+                                <button class="btn btn-sm btn-gold" onclick="alert(\'指令已下发！限Elena Wang于2小时内算出报价并对客户诚挚致歉。\')">下达2小时限时算单指令</button>
+                            </div>
+                        </div>
+
+                        <!-- 事故 3 -->
+                        <div class="p-3 rounded" style="background-color: rgba(210, 153, 34, 0.05); border: 1px solid rgba(210, 153, 34, 0.15);">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="fw-bold text-warning"><i class="bi bi-clock-fill"></i> RAINT CoLtd (L4大客) - 信保单挂起7天无催付</span>
+                                <span class="badge bg-warning text-dark">L4顶级客户</span>
+                            </div>
+                            <p class="small text-main m-0"><strong>负责销售</strong>：Summer Zhao | <strong>信保创建</strong>：2026-06-09 16:31:12</p>
+                            <p class="small text-dim mt-2 m-0"><strong>事故诊断</strong>：我司于 6/9 起草并发送了威海拼箱信保单 `26954317501032330`，大单利润可观，但 Summer **长达 7 天处于冷读零跟进状态**，毫无付款引导或跟单动作。</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=258102330&activeAccountIdEncrypt=MC1IDX1TJUjUX9opy1l_TzfSFXEeRGqAI-GlnMmM76YUsR73jQ4nlohSLwmwxnusLTvqLyN" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-box-arrow-up-right"></i> 催促付款会话</a>
+                                <button class="btn btn-sm btn-gold" onclick="navigator.clipboard.writeText(\'Dear RAINT team, we noticed the Trade Assurance order is awaiting initial payment. As we are currently approaching the peak season for glass candle jar production, manufacturing schedules fill up very fast. Making the payment today guarantees completion by late July. Please let me know if you need assistance with the payment interface!\'); alert(\'已复制激活模板！可直接发给买家。\');">一键复制付款催缴英文模板</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. 7天未跟进及沉默买家 -->
+                <div class="col-lg-6">
+                    <div class="stat-card h-100" style="border-color: var(--warning-orange);">
+                        <h5 class="section-title text-warning mb-3">
+                            <span><i class="bi bi-funnel-fill"></i> 7天沉默买家与流失诊断 (沉没唤醒区)</span>
+                            <span class="badge bg-warning text-dark">沉没 🟡</span>
+                        </h5>
+
+                        <!-- 沉默 1 -->
+                        <div class="p-3 mb-3 rounded" style="background-color: #1c2128; border-left: 3px solid var(--accent-gold);">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold">calvin creuels (荷兰) - 运费天价吓退</span>
+                                <span class="text-danger small fw-bold">沉没 8天</span>
+                            </div>
+                            <p class="small text-dim m-0"><strong>跟进销售</strong>：Elena Wang | <strong>最后活跃</strong>：06-08 14:16 | <strong>买家级别</strong>：L3级</p>
+                            <p class="small text-main mt-2 m-0">❌ **流失病灶**：销售为其 100个（货值仅$70）蜡烛罐报价了 **$145 的天价空运费**，导致买家冷读沉默。</p>
+                            <p class="small text-warning mt-1 m-0">💡 **唤醒大招**：立刻改报经济邮政小包线（45-60天），**将运费降至 $48**，总价从 $215 降至 $118 促成复活！</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1639218018&activeAccountIdEncrypt=MC1IDX1yT0zd1RaSdAqK-z_FIhoqMxsk02mNIogWsjXLe_kGlOSSYmeDhXlL4gQRsoAJhoe" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-box-arrow-up-right"></i> 发送改价</a>
+                                <button class="btn btn-sm btn-gold" onclick="navigator.clipboard.writeText(\'Hi Calvin, I wanted to follow up. We understand $145 for air shipping might be relatively high compared to the $70 goods value. We have just coordinated with our logistics agent and can now offer a slower economic postal line for only $48! This brings your total cost down to $118 instead of $215. Would you like us to modify the link?\'); alert(\'已复制低成本运费唤醒模板！\');">复制运费降维话术</button>
+                            </div>
+                        </div>
+
+                        <!-- 沉默 2 -->
+                        <div class="p-3 mb-3 rounded" style="background-color: #1c2128; border-left: 3px solid var(--accent-gold);">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold">Noura AlBabtain (科威特) - 嫌贵直接流失</span>
+                                <span class="text-danger small fw-bold">沉没 8天</span>
+                            </div>
+                            <p class="small text-dim m-0"><strong>跟进销售</strong>：Elena Wang | <strong>最后活跃</strong>：06-08 14:57 | <strong>买家级别</strong>：L2级</p>
+                            <p class="small text-main mt-2 m-0">❌ **流失病灶**：买家抱怨 `"even the product is expensive for a box only"`，销售只发了“量多会便宜，期待下次”后直接僵死。</p>
+                            <p class="small text-warning mt-1 m-0">💡 **唤醒大招**：主动推荐一款目前大货正在拼版，单价便宜 30% 以上的现货包装盒进行再次建联。</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1637057772&activeAccountIdEncrypt=MC1IDX1i3bnzbURT17TAKArKu5Nv8qYcDM2prCG7w1JacTTjFbjYtBeRzsJ_j1CYJnSvRRg" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-box-arrow-up-right"></i> 阿里会话</a>
+                                <button class="btn btn-sm btn-gold" onclick="alert(\'已调取公版廉价包装盒参数，请通知Elena立即在IM中追发！\')">追发便宜公版推荐</button>
+                            </div>
+                        </div>
+
+                        <!-- 沉默 3 -->
+                        <div class="p-3 rounded" style="background-color: #1c2128; border-left: 3px solid var(--accent-gold);">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold">Matthew Gopal (南非) - 销售敷衍打入冷宫</span>
+                                <span class="text-danger small fw-bold">沉没 8天</span>
+                            </div>
+                            <p class="small text-dim m-0"><strong>跟进销售</strong>：Summer Zhao | <strong>最后活跃</strong>：06-08 15:06 | <strong>买家级别</strong>：L3级</p>
+                            <p class="small text-main mt-2 m-0">❌ **流失病灶**：买家发文跟进，卖家 Summer 极其冷漠回复单个词 `"ok"` 后，直接封死话题，打入冷宫。</p>
+                            <p class="small text-warning mt-1 m-0">💡 **唤醒大招**：作为 L3 大买家，销售必须主动向其推荐我司最新研发的石膏蜡台 or 精油 Catalog，诚恳破冰。</p>
+                            <div class="d-flex gap-2 mt-3">
+                                <a href="https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1505166663&activeAccountIdEncrypt=MC1IDX1qi98Dmmt2sTkN5IksOuKP4WhiCHgwKxRA1dHs4jo0ICCnWJckoP0vAAOpQn_QHEf" target="_blank" class="btn btn-sm btn-outline-light"><i class="bi bi-box-arrow-up-right"></i> 直达破冰</a>
+                                <button class="btn btn-sm btn-gold" onclick="alert(\'已生成精美香薰Catalog，请通知Summer Zhao立刻主动追发给Matthew Gopal进行破冰！\')">一键下发最新产品Catalog</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
