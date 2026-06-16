@@ -1,0 +1,415 @@
+Total conversations: 24
+
+========================================
+[1] Buyer: Pooja Dhull | Country: AU | Level: L2 | Sales: Summer Zhao
+ID: 2143951144-408084301368#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=7035452799&activeAccountIdEncrypt=MC1IDX12WXZoFAHG9wEMhHFlqCcT0IgTU7cqKnWWDfJaz_zGw9BvGOklUsJ9Md7yl1KBqmV
+Messages (1):
+  - seller [2026-06-15 15:06:55]: This is a trade Assurance card. Order id is 304281331501022799 Shipping address is Australia, New South Wales, Quakers Hill
+
+========================================
+[2] Buyer: Jack Stevenson | Country: US | Level: L3 | Sales: Summer Zhao
+ID: 133185696130-2143951144#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=187567222&activeAccountIdEncrypt=MC1IDX1AJ5h0rEDLtjI3kGsiv-Ui1AQXjFnxvSUu_hJLje17ElvdNaWfZJmvm8Xsmjz1uhA
+Messages (3):
+  - seller [2026-06-15 08:49:04]: Hi，Jack Stevenson
+  - buyer [2026-06-15 08:49:43]: hello
+  - seller [2026-06-15 08:50:20]: Elena will reply you.
+
+========================================
+[3] Buyer: Assistant Eva | Country: CN | Level: None | Sales: Summer Zhao
+ID: 2143951144-2217942420940#11011 | unread: 1 | hasUnread: True
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=278505947&activeAccountIdEncrypt=MC1IDX1Zh54rHyMt7Y37ZULq6VhyAJ33_bLNWtJGjzOuBq7p_x23E8G5E_sI-gnvEEGCbQi
+Messages (1):
+  - buyer [2026-06-15 14:46:55]: {"cardType":2086,"params":{"toUid":"2143951144","activeAccountIdEncrypt":"MC1IDX1Z_3CqzT41NXAuqRndc-8ujbCUE9UjSZb96Tx4qt_0PFmBt5eGTRwG3G_BrqcVGLn","sign":"1383220EAA835B92DF20C1ABE5957475CD42D10C","buyerName":"V Chung","scene":"repurchaseBuyerOnlineRemind","activeAccountId":"937092916","chatToken":"YVVGWk5saDVkakpCUW5oTk1uRnRZbWREUTNscWVreHNZMXBvY2tVMVZtWnRSMGxNVEdONVIyUlRNVmwzWlRGb2JqUlJlWEU0U0N0UGNrZG1SRFpwY2tWNmFtRkdUelV6U0dadmRGQk1ZV1JhTnlzNVEwRlNWM053YkRWRmIwTktLMVp5VUdjM1VrOXVSQ3N4V0hCSVFYVlpUME53TmxoUWNHZDROVU0yV2pWQ09VbDVNR1pWVEVGTGRIUTBTVWcyUVNzNFRucDRhSFpaY0RKclZUVkZiVGx6YjJ0TldsbEVOVkJSWVdGTllUQk1VM2RZTm5oQ1EwbHZMMUpJZEhndlpWaHhNMjlSVkdrMFdqWjFSRkZyYm5KVUx5OUpRVDA5JnZlcnNpb249Mi4wLjA=","fromUid":"2217942420940","processId":"3IM4G5N1OLHO61H","ctime":"1781506015510","loginIdEncrypt":"8pctgRBMALNhLw4P R2pHP8kguJFetDS6wdkfYSa s4=","targetAliId":"133436446862"}}
+
+========================================
+[4] Buyer: Victoria vacher | Country: FR | Level: L1 | Sales: Stephen Zhang
+ID: 1507651932393-2500000356174#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1619293049&activeAccountIdEncrypt=MC1IDX1X2SA3Fnm9mTjSZoMrWcRy4jlsZebcB4MMYdL2u0lyvEirWndN5UeXEn9_nC0yFmP
+Messages (1):
+  - seller [2026-06-15 08:38:05]: Hi, dear 
+
+Have you received the sample package?
+
+========================================
+[5] Buyer: Jack Stevenson | Country: US | Level: L3 | Sales: Elena Wang
+ID: 133185696130-2190380021#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=187567222&activeAccountIdEncrypt=MC1IDX1plmKB_X5-FosEAjynx4egjdcUXafBZuvqyrHrwK3i3YzY1UXUn2Gj8KrRjh3ZZdu
+Messages (3):
+  - seller [2026-06-15 08:52:04]: {"height":1000,"isOriginal":0,"width":1000,"size":389104,"suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4662958208&parentId=4662958207&secOperateAliId=MC1IDX1g4sskd6JNXqNrYZZHF9lG0Ud2aPkeo_zz2CrVxOkbtUWDflX3chSvueMHIFj1W3h&fileAction=imagePreview&scene=1","md5":"4037319d529ffa45db1d4a257313dd17"}
+  - seller [2026-06-15 08:52:31]: Hello Jack, this product comes in multiple sizes. Which one would you like to order?
+  - seller [2026-06-15 09:14:37]: We offer three diameters: 6.5 cm, 8.5 cm, and 10 cm.
+
+========================================
+[6] Buyer: Celeste Phox | Country: US | Level: L1 | Sales: Elena Wang
+ID: 2034005142189-2190380021#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1638027433&activeAccountIdEncrypt=MC1IDX1FNFdDfZqAQO5tF2whYXEHH-fasQ7SWtEcb9JBg7sOkdwOUn0JsMAcwCKRfpFzIYi
+Messages (6):
+  - buyer [2026-06-15 14:29:11]: This is a inquiry card. Inquiry id is 20498627908; Product id is 1600932247503. Product Name is Iridescent Holographic Round Bottom Glass Candle Jar With Wood Lids Candle Jars Glass With Lid and Box; The note of the buyer's inquiry is undefined;
+  - seller [2026-06-15 14:29:27]: 
+  - seller [2026-06-15 14:30:22]: Hello, the size you've chosen is currently out of stock and will need to be custom-made, with a minimum order quantity of 500 pieces per color.
+  - buyer [2026-06-15 14:31:27]: This is a inquiry card. Inquiry id is 20496438253; Product id is 1601126808217. Product Name is Classic Spa Treatment Cylinder Glass Candle Massage Jar Scented Candle Holder with Spout for Valentine's Day; The note of the buyer's inquiry is undefined;
+  - seller [2026-06-15 14:34:04]: ok
+  - seller [2026-06-15 14:40:13]: Clear style: minimum 250 pieces  
+EXW price: $1.29 per piece  
+
+Black style:  
+MOQ: 500 pieces  
+EXW price: $1.39 per piece
+
+========================================
+[7] Buyer: Hgfn Bnbfq | Country: TH | Level: None | Sales: Elena Wang
+ID: 2190380021-3500027295479#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=7090285329&activeAccountIdEncrypt=MC1IDX1ScHFwaaRrMQ4DJLCtn78h1HhpWzeVAnRzCyIeGHAol9fVYEPYMHBkqKa9j3ol094
+Messages (3):
+  - buyer [2026-06-15 09:34:47]: กรุณาแจ้งข้อมูลติดต่อของคุณมา เราจะติดต่อกลับโดยตรง
+  - seller [2026-06-15 09:34:50]: สวัสดีค่ะ  ขออภัยนะคะ ทางเรายังไม่สามารถแจ้งข้อมูลติดต่อโดยตรงได้ในขณะนี้ แต่ยินดีช่วยตอบคำถามและให้ข้อมูลทุกอย่างที่ต้องการค่ะ ก่อนอื่นอยากทราบว่าคุณต้องการสั่งซื้อสินค้าปริมาณเท่าไหร่คะ?
+  - seller [2026-06-15 09:34:58]: OK
+
+========================================
+[8] Buyer: Pooja Dhull | Country: AU | Level: L2 | Sales: Elena Wang
+ID: 2190380021-408084301368#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=7035452799&activeAccountIdEncrypt=MC1IDX1lD7PovuYB7RDDJXQ2_KvL3IUE3aCVN4_-8PBoFkY0QUnLZAQXGGiMaxBxqdh_pSF
+Messages (3):
+  - seller [2026-06-15 14:04:09]: Hello Pooja, please check the quote 
+ Shipping cost: $700 (DDP - tax-inclusive delivery to door) 
+ Shipping time: Delivery within 30-35 days after departure.
+  - seller [2026-06-15 14:04:15]: {"cardType":12,"params":{"ctime":"1781503455692","extensionType":"pdf","from":"cn1511621437","id":"4666811434","md5":"039d573d40b30571fbfcfee742b752fd","parentId":"4661325964","sign":"E3F2746861B5783424D6BC9830A9588F1FA9F1B0","to":"au19036808706uqnv","type":"12","version":"1","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4666811434&parentId=4661325964&secOperateAliId=MC1IDX1UbD4KO7hWwmlwhYWw6tHnNPpeIlma5g3wSJoUfalpVtacjJmoOKkDouRBcBoc_m6&fileAction=officePreview&scene=1","name":"Yude 12oz glass jar quotation-Pooja Dhull260615.pdf","size":85749,"thumbnailUrl":"https://clouddisk.alibaba.com/file/videoThumb.htm?appkey=OneChat&id=4666811434&parentId=4661325964&secOperateAliId=MC1IDX1k2EIR6Rp4wOxd769PkySf_XxoCWdSD79FWVm8Q4zEp-SjiArzlniYbVLmAxQh_W6&scene=1"}}
+  - seller [2026-06-15 15:07:34]: This is a trade Assurance card. Order id is 304281331501022799 Shipping address is Australia, New South Wales, Quakers Hill
+
+========================================
+[9] Buyer: Emma Cook | Country: AU | Level: L2 | Sales: Elena Wang
+ID: 133359610491-2190380021#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=860396444&activeAccountIdEncrypt=MC1IDX1Zx4-i-i2TPJyl_DbKBk8bi2fXqUkX9b--bZUHnBUnAqtXBM8o1YjYagzo7cLCD-B
+Messages (3):
+  - seller [2026-06-15 09:10:22]: This is a RFQ Quotation card; Quotation id is 1266143869; Product name is Apothecary Jar 30ml 50ml Amber Glass Laboratory Pharmacy Apothecary Jar Reagent Bottle With Glass Stopper;
+  - seller [2026-06-15 09:10:23]: Hello Emma, 
+
+We can provide a 30ml glass bottle with a bamboo cap.
+Do I need to check the shipping cost for you?
+Looking forward to your reply.
+
+Best regards,
+Elena
+  - seller [2026-06-15 09:10:57]: {"height":800,"isOriginal":0,"width":800,"size":30826,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4665279213&parentId=4665279212&secOperateAliId=MC1IDX1px4PaOUR6T7YRnSlgTqNp75Rc7oddnifs2YP7sii1IUmfcoa3E3ql_wQYkWfZQpq&fileAction=imagePreview&scene=1","md5":"3e56d2673dbc68f57152e0490b388c8a"}
+
+========================================
+[10] Buyer: Wejdan Alharbi | Country: SA | Level: L1 | Sales: Elena Wang
+ID: 2190380021-4500082959193#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1762011910&activeAccountIdEncrypt=MC1IDX1sUrn9JQh8bkqhzsFmSJcD0qqQzSwunGS0Sv05GcajtZ58aZY0bIbZmTchYbAvzAa
+Messages (28):
+  - seller [2026-06-15 12:02:17]: مرحباً وجدان، يمكننا تخصيص هذا المنتج، ولكن لا يمكننا تقديم عرض أسعار لك في الوقت الحالي. 
+ لأننا لا نملك المنتج الفعلي، فنحن غير متأكدين من المكونات المستخدمة فيه. 
+ أقرب مقاس قالب لدينا حاليًا هو D9H10 سم. 
+ الحد الأدنى للطلب 30,000 قطعة.
+  - seller [2026-06-15 12:02:28]: {"height":124,"isOriginal":0,"width":572,"size":52344,"suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4664342336&parentId=30815895466&secOperateAliId=MC1IDX1XmDZGwghZc9l9UAJlyOXbt42AtxedStIXbB5SR_c2F4qoyRCVvF7rAxkcthuTXii&fileAction=imagePreview&scene=1","md5":"167601958b336661d7579dfd9df2f965"}
+  - buyer [2026-06-15 15:10:45]: لماذا 30000
+  - seller [2026-06-15 15:11:13]: الحد الأدنى لكمية الطلب للتشغيل المستقل
+  - seller [2026-06-15 15:11:27]: كم قطعة تود شراءها؟
+  - buyer [2026-06-15 15:15:55]: واذا كانت القياسات من المتاح عندك فقط تم تغيير الرسومات الخارجيه
+  - seller [2026-06-15 15:16:59]: تقليل بنفس النسبة
+  - seller [2026-06-15 15:19:50]: إذا كنت بحاجة إلى نسخة طبق الأصل تمامًا لأبعاد منتجك اليدوي، فسيتطلب الأمر فتح قالب، وتكلفة القالب هي 4500 دولار أمريكي. 
+ غير اقتصادي، لذلك اخترت قالبًا بحجم مماثل.
+  - seller [2026-06-15 15:20:12]: لدينا أيضًا مقاس أكبر قليلاً.
+  - seller [2026-06-15 15:20:22]: {"height":150,"isOriginal":0,"width":313,"size":20843,"suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4663913446&parentId=30815895466&secOperateAliId=MC1IDX1kqf2PWasy6DixEA62XjQQFO3A7psDOsrmTq6tV9RlkbJlwYs2gJixwavqeXxfOrC&fileAction=imagePreview&scene=1","md5":"ca38a6fdca6fdad7d713ca8fda20a782"}
+  - buyer [2026-06-15 15:20:42]: واذا اخترت من القياسات القوالب المتوفرة لديك
+  - buyer [2026-06-15 15:20:51]: الحد الادنى 30000
+  - seller [2026-06-15 15:21:06]: نعم.
+  - buyer [2026-06-15 15:21:12]: لكن اريدها مضاءه
+  - buyer [2026-06-15 15:21:54]: الكمية جدا كبيرة
+  - buyer [2026-06-15 15:22:01]: لا يناسبني
+  - buyer [2026-06-15 15:22:36]: ماهو اقتراحك لاقل كمية
+  - seller [2026-06-15 15:23:15]: يمكن أن يضيء. 
+ نقش على جسم العلبة، مع إضافة إضاءة لاحقًا. 
+ ولكن نحتاج منك أن ترسل لنا عينة.
+  - seller [2026-06-15 15:23:34]: كم قطعة تود شراءها؟
+  - buyer [2026-06-15 15:23:40]: لا احتاج الى 30000
+  - seller [2026-06-15 15:23:53]: كم قطعة تحتاج؟
+  - buyer [2026-06-15 15:23:54]: 5000 مبدئياً
+  - buyer [2026-06-15 15:25:57]: 
+  - buyer [2026-06-15 15:26:24]: 5000
+  - seller [2026-06-15 15:27:26]: رد الإنتاج: يمكننا قبول 5000. 
+ ولكن يتطلب إنتاجًا بتجميع الصفحات. 
+ أي أن منتجك يتم إنتاجه مع منتجات عملاء آخرين، ليصل إجمالي الكمية المطلوبة للتشغيل إلى 30000 وحدة. 
+ وأيضًا، سيكون سعر الوحدة أعلى قليلًا.
+  - seller [2026-06-15 15:28:27]: لا يمكننا تقديم عرض سعر قبل أن ترسل لنا المنتج الفعلي.
+  - seller [2026-06-15 15:35:09]: Elena 
+Tel: +86 18560869587
+Email: elena@zyzglassware.com
+Address: ZIBO YUDE TRADING CO.,LTD.   Room 1801, Block B, China Europe International Building, No. 7 Jin Street, Beijing Road, Ma Shang Street Office, Zhangdian District, Zibo City, Shandong Province
+  - seller [2026-06-15 15:35:47]: معلومات عنوان شركتنا، 
+ إذا كنت ترغب في إرسال عينة، يمكنك إرسالها إلى هذا العنوان.
+
+========================================
+[11] Buyer: Assistant Eva | Country: CN | Level: None | Sales: Elena Wang
+ID: 2190380021-2217942420940#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=278505947&activeAccountIdEncrypt=MC1IDX1uCUXqCrIVIC250Vr7SJ695waQ8Qnbr6OJm2YGAVEQl2LZ_--1doeNc_ILzYTmiOE
+Messages (4):
+  - buyer [2026-06-15 09:09:18]: {"cardType":2106,"params":{"toUid":"2190380021","remindBuyers":"[{\"activeAccountId\":\"250846923\",\"activeAccountIdEncrypt\":\"MC1IDX1Yir4x2p2q7Gn8WCPNvROZBV8x6ugNIjZXuBvQzWmQJzKANIN6B75gd0xYKXiT5YR\",\"aliId\":2210898332984,\"chatToken\":\"TVdZcmMzQk5NRll6SzJFelMwRkRRblJJZFZKVUt5ODRNMEpCVUhjNGJGUXdaVEJpUlZsU2FtbEVXVnB4ZWpJeVJFOXZhRVIwTW5oeGVYUTBVMGhWVjFscGFYYzNUMFZsUTJkbGF6a3dTa2s0WTJsYVIzZEJabmxwWXprclVWVnNZVmROUTBJM2FpdDBXR3B6VW1GRlEzbE5TRkU0VldKS1VrVlVUVWd2VG1ObE9VMU1kMkZrY1hNemNETXlSWFpuTkhKdFRYSnZNVTVhT1daUFNGSXZXRkZxTXpGdFVXbE5ZVGhDVjJKd1kxSmtkRk56YzBSSVZsRkllVTVzUVRKSSZ2ZXJzaW9uPTIuMC4w\",\"loginIdEncrypt\":\"8pctgRBMALM1Y4gAJAcXnjCADk0WWJQh6wdkfYSa%2Bs4%3D\",\"questionType\":\"10dNotShip\"}]","fromUid":"2217942420940","sign":"AD7732CE6EEED13215B29240236A74F1D74B09CC","ctime":"1781485758111"}}
+  - buyer [2026-06-15 09:42:31]: {"cardType":2086,"params":{"toUid":"2190380021","activeAccountIdEncrypt":"MC1IDX1Zius78Q-KyqVqo7DEbf8F03lBcvT3yoDWn1_RNUhMJiiwjX9WmzkBrCOQx9pRuZo","sign":"D2C3772B49B6C7E5EEE77C57F6D520D9E2820B2D","buyerName":"Estefany Perezarboleda","scene":"repurchaseBuyerOnlineRemind","activeAccountId":"1569463076","chatToken":"YVVGWk5saDVkakpCUW5oTk1uRnRZbWREUTNscWVreHNZMXBvY2tVMVZtWnRSMGxNVEdONVIyUlRNVmwzWlRGb2JqUlJlWEU0U0N0UGNrZG1SRFpwY2tWNmFtRkdUelV6U0dadmRGQk1ZV1JhTnlzNVEwRlNWM053YkRWRmIwTktLMVp5VUdjM1VrOXVSRGh0WWpkSGEzSnpTamRZY0V4cVRsUm5jamxFWkVONU1WZGlUMWRhTTIwcldtVndXRGRpUmtGd1kxazFhR1owVm5vMllrUlNVSEE0YjBkMFkyd3lkR1ozWkVkemFWRXZVVFowSzNsR2JrMUxZMFIzVDNWMmVuRkRkVWRoWW1KQ2EyZDJMMXA0TldSV2JuRnNRVDA5JnZlcnNpb249Mi4wLjA=","fromUid":"2217942420940","processId":"FEBPB5N1451P71P","ctime":"1781487750990","loginIdEncrypt":"8pctgRBMALO5mGGSxXPdNADi48PzfIck9V/gJ XYVIQ=","targetAliId":"1507603045384"}}
+  - buyer [2026-06-15 10:17:04]: {"cardType":2086,"params":{"toUid":"2190380021","activeAccountIdEncrypt":"MC1IDX1lVTl-wVtOrf2tk8R_2yIHDH-Us9Fxx_t3E83xkI9bJECgowXklDVw7q7fb2snzhX","sign":"8370B20333ACBE58E90742A5FF3D0AE20CA57311","buyerName":"Ori  Herstik","scene":"repurchaseBuyerOnlineRemind","activeAccountId":"189513397","chatToken":"YVVGWk5saDVkakpCUW5oTk1uRnRZbWREUTNscWVreHNZMXBvY2tVMVZtWnRSMGxNVEdONVIyUlRNVmwzWlRGb2JqUlJlWEU0U0N0UGNrZG1SRFpwY2tWNmFtRkdUelV6U0dadmRGQk1ZV1JhTnlzNVEwRlNWM053YkRWRmIwTktLMVp5VUdjM1VrOXVSQ3N4V0hCSVFYVlpUME53TmxoUWNHZDROVU0yV2pWaUsybEZRVGN3WVV0Q1dVSk9VV3d5VGxOWVRsVjZNbFZMYWtkNFRtUlVZMVJoVFc1UFMyZFllRmxJV1docE9XRnlVR0pRY1hGbVNtUmhTMlY0VGpaNmVHVjFTSHBVTWtKWlNYUTNkRlpvWkhveVkzTmpRVDA5JnZlcnNpb249Mi4wLjA=","fromUid":"2217942420940","processId":"3M59C5N1S69DNBG","ctime":"1781489824534","loginIdEncrypt":"8pctgRBMALMbYbdiMneRUQzP6R8/QhiX","targetAliId":"133187623300"}}
+  - buyer [2026-06-15 10:40:18]: {"cardType":2086,"params":{"toUid":"2190380021","activeAccountIdEncrypt":"MC1IDX1NDW_0Bdt7vuS2WHFVF5k6FKtm8FxJyWPds_TAvtIwavG_-8fWABC2V44YJ0v6cLB","sign":"034AB59957BDC6CE359225E356DD306D5E441543","buyerName":"Riane Victoria","scene":"repurchaseBuyerOnlineRemind","activeAccountId":"818224809","chatToken":"YVVGWk5saDVkakpCUW5oTk1uRnRZbWREUTNscWVreHNZMXBvY2tVMVZtWnRSMGxNVEdONVIyUlRNVmwzWlRGb2JqUlJlWEU0U0N0UGNrZG1SRFpwY2tWNmFtRkdUelV6U0dadmRGQk1ZV1JhTnlzNVEwRlNWM053YkRWRmIwTktLMVp5VUdjM1VrOXVSRGgzVTNkTGVVRkxhVUp3TVUxWlJucEthVEJxTkZGT2JVdFpXVTlNT1V0WE0zbHFkVzkwVkU5SlFrMTFjRFppY0ZkTk1VeE9kbnB2U1RSUFFqaElkbFZCUVRObVozSk1SazkzTDBWWU5GQXJjRVpTUm1vM1JUbHBNbVV5TW5BdmVFdFBTREZPZDFWVlRDczBRVDA5JnZlcnNpb249Mi4wLjA=","fromUid":"2217942420940","processId":"92QJC5N1Q2RJ51P","ctime":"1781491218733","loginIdEncrypt":"8pctgRBMALOGsxFT2wvXpAl0rFh1KsTl6wdkfYSa s4=","targetAliId":"202036930495"}}
+
+========================================
+[12] Buyer: NT NuTie | Country: TH | Level: L3 | Sales: Amber Lee
+ID: 2246671499-408092443916#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=7039116998&activeAccountIdEncrypt=MC1IDX1KKRF485diMXV42udMZXYmBfzaUSUQ4Mm_XzY4p7cLYyNz9QPBEjW_qIe9ioMLMbi
+Messages (2):
+  - buyer [2026-06-15 08:59:18]: Thank you
+  - seller [2026-06-15 09:03:38]: It’s my pleasure
+
+========================================
+[13] Buyer: Saad Iftikhar | Country: PK | Level: L3 | Sales: Amber Lee
+ID: 2012009381938-2246671499#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=7058176539&activeAccountIdEncrypt=MC1IDX19hhEYWtL94EXdRmIG5PrpyilPKGpdJuG7ztEzidcYYMXPIe7j-kb-LC6-8v5T5QM
+Messages (3):
+  - buyer [2026-06-15 14:38:15]: brown box not color box
+  - buyer [2026-06-15 14:38:22]: ?
+  - seller [2026-06-15 15:02:00]: Ok no problem
+
+========================================
+[14] Buyer: Matt X | Country: US | Level: L3 | Sales: Amber Lee
+ID: 202024523203-2246671499#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=803643932&activeAccountIdEncrypt=MC1IDX1qKAAvLjOz-S0ZY11oJ_QlRrDIbJfLNs7Xl-V3Ja8pStoLD1sA5TE1W8rt__yP2cx
+Messages (5):
+  - buyer [2026-06-15 11:18:56]: 你好，请问一下货代那边没问题的吧？
+另外能不能给我发一份更新的PI，我们财务需要
+  - seller [2026-06-15 11:20:03]: 你好Matt,
+
+没有问题，今天早上我已经联系货代了，给她更新了booking，她预定的是24号的船期
+  - seller [2026-06-15 11:20:21]: 好的，我今天更新给您PI
+  - buyer [2026-06-15 11:20:55]: 好的非常感谢
+  - seller [2026-06-15 11:21:11]: 不用客气/:smile.
+
+========================================
+[15] Buyer: Assistant Eva | Country: CN | Level: None | Sales: Amber Lee
+ID: 2217942420940-2246671499#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=278505947&activeAccountIdEncrypt=MC1IDX10qGVDtZ6MQ099Jp0AMbF5PvT0CjsrAGhiZwfCjZ_D0IfRed8-lg5JVDa9DYq6q4m
+Messages (1):
+  - buyer [2026-06-15 09:07:34]: {"cardType":2106,"params":{"toUid":"2246671499","remindBuyers":"[{\"activeAccountId\":\"1059853591\",\"activeAccountIdEncrypt\":\"MC1IDX1wBCHk4M9doTWmCIw0_15onA_dQBa5qd9QSa998DX0A7rgStzIK5A2kWBfNlVAkRc\",\"aliId\":133768958344,\"chatToken\":\"TVdZcmMzQk5NRll6SzJFelMwRkRRblJJZFZKVUt5ODRNMEpCVUhjNGJGUXdaVEJpUlZsU2FtbEVXVnB4ZWpJeVJFOXZhRVIwTW5oeGVYUTBVMGhWVjFscGFYYzNUMFZsUTJkbGF6a3dTa2s0WTJsYVIzZEJabmxwWXprclVWVnNZVmROUTBJM2FpdDBXR2hFZFVOVVZHMVdZVU0zZUZGQldVUjNka2xNSzFWNlNYVm1RekZsVjJJM1pHc3ZUREZQU0ZScllrc3pSVmt3YVhOSmNrZENLME5QUWtscVdHRTNja2xoZFZCa1ZuTjFTREJXUjJwM2VrSXZZWGcwVTFKRiZ2ZXJzaW9uPTIuMC4w\",\"loginIdEncrypt\":\"8pctgRBMALP21JhYO27hewvkL98GyBq%2B6wdkfYSa%2Bs4%3D\",\"questionType\":\"10dNotShip\"}]","fromUid":"2217942420940","sign":"A263506C6F1C8D93AE8CBAA523369D7609506AEF","ctime":"1781485654336"}}
+
+========================================
+[16] Buyer: Nathan Trias | Country: US | Level: L2 | Sales: Theo Li
+ID: 2171971125-4500066923429#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1745757033&activeAccountIdEncrypt=MC1IDX1vHYDsN8qLPpQVMUmcMSUfjfnhwFXKCPclYik2oJ9afUvo5Y63KsA_I-rRPp90AnM
+Messages (4):
+  - buyer [2026-06-15 10:35:21]: Okay
+  - seller [2026-06-15 10:40:59]: I'm coordinating with the factory and will get back to you later.
+  - buyer [2026-06-15 10:42:11]: /:approve.
+  - seller [2026-06-15 10:43:34]: /:flowers.
+
+========================================
+[17] Buyer: Li Ricky | Country: CN | Level: None | Sales: Theo Li
+ID: 2171971125-2207368790232#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=240243191&activeAccountIdEncrypt=MC1IDX1hgqioNl1oqY3snPN4tt41IjMwtJRoYI9rKFXVr5joJVvVp3GQ2vzmx2QNTi5TRkc
+Messages (20):
+  - buyer [2026-06-15 15:10:19]: {"height":211,"isOriginal":0,"width":303,"size":54354,"suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4663829379&parentId=4663829378&secOperateAliId=MC1IDX1ryssbOtYMgmYIx6eNfa0VQEVK1zd51KP8aTzJ_GOxYBj3Ua5xVQsrdkYRvaate73&fileAction=imagePreview&scene=1","md5":"605e69bfc3fe3c1eb8d8ad8f0cf701dc"}
+  - buyer [2026-06-15 15:10:19]: {"height":211,"isOriginal":0,"width":303,"size":54354,"suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4663829379&parentId=4663829378&secOperateAliId=MC1IDX1ryssbOtYMgmYIx6eNfa0VQEVK1zd51KP8aTzJ_GOxYBj3Ua5xVQsrdkYRvaate73&fileAction=imagePreview&scene=1","md5":"605e69bfc3fe3c1eb8d8ad8f0cf701dc"}
+  - buyer [2026-06-15 15:10:23]: 这个产品有在做吗
+  - seller [2026-06-15 15:10:34]: Got it! We do offer similar glass storage jars. Let me confirm the specifics with my manager.
+  - seller [2026-06-15 15:13:11]: 你好
+  - buyer [2026-06-15 15:13:24]: 你好 Theo
+  - seller [2026-06-15 15:13:34]: 您需要多少？
+  - seller [2026-06-15 15:13:38]: 可以做
+  - buyer [2026-06-15 15:13:43]: 木质的饭盒，1000-2000个，可以做吗
+  - buyer [2026-06-15 15:13:49]: 盒身一处激光logo
+  - seller [2026-06-15 15:14:45]: 请稍等我查看一下
+  - buyer [2026-06-15 15:15:03]: 盒身玻璃，盖子是竹子
+  - seller [2026-06-15 15:15:53]: 是的
+  - buyer [2026-06-15 15:16:04]: 是高硼硅还是纳钙
+  - seller [2026-06-15 15:16:22]: 都可以做，看您的需求
+  - buyer [2026-06-15 15:24:51]: 你们现有是什么材质
+  - buyer [2026-06-15 15:25:07]: 帮我算下含专票13个 运费 常规包装到青岛人民币价格，打样费，打样时间，大货时间，外箱尺寸，装箱数，毛重，产品参数，数量按照1000和2000
+  - seller [2026-06-15 15:29:34]: 我看一下
+  - seller [2026-06-15 15:29:45]: EXW+运费/FOB？
+  - buyer [2026-06-15 15:34:05]: 含税运费包装人民币价格
+
+========================================
+[18] Buyer: Assistant Eva | Country: CN | Level: None | Sales: Theo Li
+ID: 2171971125-2217942420940#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=278505947&activeAccountIdEncrypt=MC1IDX1ekZ2azQQOo7u3A2zUUdAODm7_Gxur9lugQLy8255Q3jL05LfuCqrLBKOfUjDfjPj
+Messages (2):
+  - buyer [2026-06-15 13:27:10]: {"cardType":2086,"params":{"toUid":"2171971125","activeAccountIdEncrypt":"MC1IDX1tFPTrQWyMhhzPodr9mFjHSfvVbTfiDtP3QvIawPUU5ECjAgT6d4MK0555s9Eyliv","sign":"26DEDAFF69D3C32F94CD5BAD0C7B509F709AD74A","buyerName":"courtney arrington","scene":"repurchaseBuyerOnlineRemind","activeAccountId":"1000462137","chatToken":"YVVGWk5saDVkakpCUW5oTk1uRnRZbWREUTNscWVreHNZMXBvY2tVMVZtWnRSMGxNVEdONVIyUlRNVmwzWlRGb2JqUlJlWEU0U0N0UGNrZG1SRFpwY2tWNmFtRkdUelV6U0dadmRGQk1ZV1JhTnlzNVEwRlNWM053YkRWRmIwTktLMVp5VUdjM1VrOXVSQ3N4V0hCSVFYVlpUME53TmxoUWNHZDROVU0yV2pWeVZUSXhWMGhTV2pRM1FUbE1hWE4zYVhSWWRUbDVaRWxNYTBaVVFrTklVRU5uTldGbFZVa3pLMnBDY1V4d1lUUlZWa1o0UmxSQldXMU9NV1JOU1dWcVRuSkZNa0Z4Y1dwWk5GTlhOVVZIUjNFMVQxWmFaejA5JnZlcnNpb249Mi4wLjA=","fromUid":"2217942420940","processId":"2960F5N1K996ABO","ctime":"1781501230228","loginIdEncrypt":"8pctgRBMALODAp5ojZ2VhxyHVHnAPAs66wdkfYSa s4=","targetAliId":"133673927024"}}
+  - buyer [2026-06-15 14:45:01]: {"cardType":2086,"params":{"toUid":"2171971125","activeAccountIdEncrypt":"MC1IDX1cqYEGQUnUTwq_GN1cM9dLH42OgHg49ZI6i4VICkMTg3WFyl8KZ8cWRZo1QwjuQlE","sign":"4EC0D9DC252ADDA5A6F25635C71F7FEB92446AC5","buyerName":"saffiyyah paul","scene":"seriousBuyerOnlineRemind","activeAccountId":"166740783","chatToken":"YVVGWk5saDVkakpCUW5oTk1uRnRZbWREUTNscWVreHNZMXBvY2tVMVZtWnRSMGxNVEdONVIyUlRNVmwzWlRGb2JqUlJlWEU0U0N0UGNrZG1SRFpwY2s0NWFsaEliVUl6VDNKa1ZqRm1lWFZwTDJ0UWJEQlNhVnBqYmpWeE9UQmhXVGhWWkdoaVJEVnVRekJVVlM5NmFqSllWblpFVUU1S2NGZHBiMHMzUVVOTWRuWlNjbTlSTlN0TGFXaHVPRkZJWldsU1pWVm5jbFpTYjBwNFJFeFpjRmx1VURaTVZFcDRhMnB4UlM5aGNrOVZTR3h2YjJwR1l5dFBUM1lyYURCWVkyZFRSbHBPVm1oVGJYRlpSa3hOUzBaalNWcEdkejA5JnZlcnNpb249Mi4wLjA=","fromUid":"2217942420940","processId":"VPQ3G5N1KPPJ511","ctime":"1781505901831","loginIdEncrypt":"8pctgRBMALMA6h/FORzmYXvK6EUdFwCp","targetAliId":"133164052708"}}
+
+========================================
+[19] Buyer: alicia Beere | Country: UK | Level: L2 | Sales: Theo Li
+ID: 2171971125-4500017545269#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1696329428&activeAccountIdEncrypt=MC1IDX1fnxxlTNS8ehoZpFqumXhwppCFGPKaVlqBEjnzzgPU024Csosj6CP0MmtLuklhPWy
+Messages (25):
+  - buyer [2026-06-15 14:01:23]: I think I may want to change the design of the blue box I don't think the two bluea look right 
+
+maybe the Heka symbol should be printed on the box ..Heka on one side and fbe crescent moon on the other in gold embossed
+  - seller [2026-06-15 14:01:48]: Do you have an ideal image?
+  - buyer [2026-06-15 14:01:55]: would you see if they can do a version like this 
+
+considering it was printed wrong anyway I think at this stage be good to see both
+  - buyer [2026-06-15 14:02:06]: yes hold on please
+  - seller [2026-06-15 14:02:13]: Okay, no problem
+  - buyer [2026-06-15 14:15:00]: {"fileId":"cdcfed5ae401d43d2ce426706e8c1093.png","height":"1402","size":"2190788","suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=300280857823&parentId=3615455324&secOperateAliId=MC1IDX19TboO1lLRTP4kSm4iKYYNapyl2ujPpEzoDGqHp-hpdN4lezvmZeCmY7TZ0623BBJ&fileAction=imagePreview&scene=1","width":"1122"}
+  - buyer [2026-06-15 14:15:39]: I think something like this .. see what Yun thinks maybe .. as she seems to have a good eye 
+
+I think she can pick some nice fonts.
+  - seller [2026-06-15 14:16:11]: The five-star design cannot be achieved with hot stamping; the factory says that hot stamping can only produce very regular lines and cannot create sharp lines
+  - buyer [2026-06-15 14:17:26]: ok what other options do we have to get this effect 
+
+I do NOT like at all what they have done ..maybe another printer would be best then if they are limited and can only do some things 
+
+ita very basic what they can do ..
+  - buyer [2026-06-15 14:18:14]: also I meant to ask about the colour printing of the three boxes for they look ok 
+don'took great on the video but it is so hard to see 
+
+am I right in remembering the fire poem is peinted on the side of them three boxes when it shouldn't be as it's only for the signature box 
+
+the colours VERY bright on the video
+  - buyer [2026-06-15 14:20:21]: wr need to find someonw who can do a stamping effect 
+
+they should have said this before going ahead with it and taking my sample money 😠
+  - seller [2026-06-15 14:21:07]: This kind of craftsmanship cannot be done/:tear.
+  - seller [2026-06-15 14:21:12]: Printing can be achieved
+  - buyer [2026-06-15 14:21:16]: what they can do does not look good and to wait all this time for them to suddenly say they cant do what I would like ???
+  - buyer [2026-06-15 14:21:28]: why??
+  - seller [2026-06-15 14:21:34]: But there's no way it's a hot-stamped color
+  - buyer [2026-06-15 14:22:20]: ok what is it then?
+  - buyer [2026-06-15 14:22:33]: whatever it is .can we find someone who can?
+  - seller [2026-06-15 14:24:33]: {"size":1572265,"url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4664838309&parentId=3615455324&secOperateAliId=MC1IDX10ol75dymuIrLqbY0OPuoiiKwNsmnNrSxSJ_2lffqMwG19xeE3YhZIw0jIbK_JYrh&fileAction=download&scene=1","mediaId":"","duration":0,"width":0,"height":0,"md5":"fab15b0c6bb5e6f540d5b23edc22d761","pic":"https://clouddisk.alibaba.com/file/videoThumb.htm?appkey=OneChat&id=4664838309&parentId=3615455324&secOperateAliId=MC1IDX1bKdkEHcWMQRdvB7AQayNoc7IzSmxq6u9M_CGvwevfBKDc3XB6GsrIZCOqGf3Hy9x&scene=1","fileId":"fab15b0c6bb5e6f540d5b23edc22d761.mp4"}
+  - seller [2026-06-15 14:24:57]: It's possible to achieve this slightly yellowish gold color; it's printed and can achieve the effect you want
+  - seller [2026-06-15 14:25:58]: The hot stamping process involves transferring gold foil onto paper or boxes using a metal mold that is heated and pressurized. Due to the physical limitations of mold engraving and gold foil transfer, it cannot achieve the sharp edges of printing. Additionally, gold foil tends to slightly spread under high temperature and pressure, and when applied to uneven or laminated surfaces, it can experience uneven stress, leading to issues such as blurred or broken lines, or thickened edges. Therefore, it is generally not suitable for creating very sharp or extremely fine gold lines
+  - seller [2026-06-15 14:26:10]: I'll go and ask around to see if there's a better solution
+  - buyer [2026-06-15 14:30:29]: the yellow colour is OK I guess for them boxes but definitely not for the signature box 
+
+I am not happy with the factory not expressing this bwfore I went ahead and paid sample 
+. the star effect is awful and I cannot believe they think that is ok to send out??
+  - buyer [2026-06-15 14:31:47]: the blue box is more premium and needs to reflect this 
+
+needs more design work which I know Yun will look at. but surely we can find something better than we currently have for printing 
+navy and gold is a must 🙌🏽
+  - seller [2026-06-15 14:33:13]: Okay, all designs can be designed 
+ But achieving this also requires the necessary craftsmanship. 
+ Currently, I am not worried about Yun's work; I am confirming with the factory which process can be implemented.
+
+========================================
+[20] Buyer: Yvonne O Kane | Country: CA | Level: L2 | Sales: Theo Li
+ID: 1507595384897-2171971125#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1561672452&activeAccountIdEncrypt=MC1IDX1_J8AwsgLLi1I_IFL_CRtANdIejEKpcIp0o6IEgf1CnF4iBEBuGXfG5flb041O5V3
+Messages (3):
+  - seller [2026-06-15 07:08:56]: Please wait a moment
+  - seller [2026-06-15 11:47:59]: {"cardType":12,"params":{"ctime":"1781495279498","extensionType":"pdf","from":"cn1511536179","id":"4664242453","md5":"f4b5b2b9ee8859f8469ca5d8f3cabcf9","parentId":"4664242452","sign":"610AB0C6E56CA343F631DFB4D7F4D7FD59C09AC8","to":"ca29063882384relk","type":"12","version":"1","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4664242453&parentId=4664242452&secOperateAliId=MC1IDX1_QZmgQ0i3sMay9ecIRD7_JPi2D9rj_63s6jzm2_43a97ufvnBHNosFsNHACKAtlC&fileAction=officePreview&scene=1","name":"tin jar-Yude.pdf","size":6569743,"thumbnailUrl":"https://clouddisk.alibaba.com/file/videoThumb.htm?appkey=OneChat&id=4664242453&parentId=4664242452&secOperateAliId=MC1IDX1B-9XMp3H12CJnPLb7HUeFZFXin-lvh1792jMzUFNyFu_aG-M5qPItbbvVeSsLnU8&scene=1"}}
+  - seller [2026-06-15 11:48:21]: What size do you need? 
+ The minimum order quantity for mold making is determined by the size of the jar.
+
+========================================
+[21] Buyer: EauDor Bignon | Country: FR | Level: L1 | Sales: Theo Li
+ID: 2171971125-5500016689749#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=15016479788&activeAccountIdEncrypt=MC1IDX1r4cP1M6R5AXMJEZxD8Q0WaE88isML-Q4vO4QrOZAYwsWvx8UEkkVnnCxdgB9gXF5
+Messages (4):
+  - seller [2026-06-15 07:09:08]: /:Blowkiss.
+  - seller [2026-06-15 09:30:20]: Hi, this lid is made of pine wood and is in stock
+  - seller [2026-06-15 10:26:08]: {"height":763,"isOriginal":0,"width":1046,"size":167391,"suffix":"png","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4665879007&parentId=300278720241&secOperateAliId=MC1IDX1e-tPbgQ6rMYoEvisTdmIBaqJpCEEurwQUBXl3575IkXQrXGPL5uFSjnOI2v3RwHS&fileAction=imagePreview&scene=1","md5":"bc4b2411c1ff38a8d9d51923dca160c8"}
+  - seller [2026-06-15 10:26:34]: Hi~ Please check the quote 
+ The price includes tax and delivery to your door.
+
+========================================
+[22] Buyer: BrownSugar CandleCo | Country: US | Level: L3 | Sales: Theo Li
+ID: 2171971125-4500027272570#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1706464610&activeAccountIdEncrypt=MC1IDX1ofsRYgDscRfrbbzPXbk-aVfmvxJ65GM5EktR8e6OgDMlqjZy9Obg9wDMp4oyY6q4
+Messages (3):
+  - seller [2026-06-15 09:20:47]: {"height":443,"isOriginal":0,"width":443,"size":59680,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4669464713&parentId=30684306619&secOperateAliId=MC1IDX10xxPbyUp5eawjwBtxM-H8qIunBrCj-vD4TLmcST69EfJ_JwVqw6g-v73T1hu72Wa&fileAction=imagePreview&scene=1","md5":"4a6a44408dfd834325af690a0d822c6b"}
+  - seller [2026-06-15 09:20:47]: {"height":443,"isOriginal":0,"width":443,"size":175062,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4665375305&parentId=30684306619&secOperateAliId=MC1IDX14FQAuzGWIf0VQneH_ZpfgbI17zK6-BjDA5-Tt-1CccFmNv9jiWQbRdGYnjXiHTW7&fileAction=imagePreview&scene=1","md5":"f7426baaa10319f7c3322dbfb41551e1"}
+  - seller [2026-06-15 09:20:59]: Hi~ Please check if there are any issues that still need to be corrected
+
+========================================
+[23] Buyer: Akshay Shahani | Country: US | Level: L3 | Sales: Theo Li
+ID: 2171971125-4500066488516#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1745330774&activeAccountIdEncrypt=MC1IDX1-7-Rwb_9ESmR_uPJAlQa3E4m4Qtq7QZGJI8Ya79Ci0kiK6Ino1Imu9ykHT6onf8E
+Messages (32):
+  - buyer [2026-06-15 10:41:38]: can you send quotation
+  - seller [2026-06-15 10:43:29]: Can you send me the pattern?
+  - buyer [2026-06-15 10:43:52]: {"height":800,"width":800,"url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=300277866717&parentId=4658241326&secOperateAliId=MC1IDX1gcx_NyOfTYHXZ-VbrTCEUM7tL6yO8zHQ-bXhWflwn6MjqADHPJ7EUOUhFrr8jB0-&fileAction=imagePreview&scene=1","isOriginal":1,"size":47891,"md5":"6601da278a8a0bcdf85301b51503ee16","fileId":"6601da278a8a0bcdf85301b51503ee16.jpg","suffix":"jpg"}
+  - buyer [2026-06-15 10:43:52]: {"height":411,"width":759,"url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=300281299774&parentId=4658241326&secOperateAliId=MC1IDX19hqP4aw3oXEnDmf2AxSVy2oyugXYtctuVsOkNCMvTVL_aPNsQxEYsP3SWmjr3nnt&fileAction=imagePreview&scene=1","isOriginal":1,"size":297587,"md5":"af6e2a7fb61cea391446f400cee30822","fileId":"af6e2a7fb61cea391446f400cee30822.png","suffix":"png"}
+  - buyer [2026-06-15 10:43:58]: i have this only
+  - buyer [2026-06-15 10:44:10]: strawberry will be replaced by our custom logo
+  - buyer [2026-06-15 10:45:31]: and  we also need authorized letter for the logo.i would request you give me quotation without logo but i must say it is single color logo
+  - buyer [2026-06-15 10:45:44]: so give me price accordingly
+  - seller [2026-06-15 10:46:34]: Do you have any pictures? 
+ How many patterns are on one jar?
+  - buyer [2026-06-15 10:46:53]: this
+  - buyer [2026-06-15 10:47:08]: this
+  - seller [2026-06-15 10:47:42]: So, should I report to you based on the four patterns on one cup?
+  - buyer [2026-06-15 10:49:24]: will you give me.quotation based on the custom logo
+  - seller [2026-06-15 10:49:36]: OK
+  - buyer [2026-06-15 10:59:32]: give me quotation for 1000/2000/5000
+  - seller [2026-06-15 10:59:42]: OK
+  - seller [2026-06-15 11:46:27]: 
+  - seller [2026-06-15 11:46:40]: 1000 pcs
+FOB：$3.25/pcs
+2000 pcs
+ FOB：$3.05/pcs
+5000 pcs
+FOB：$2.75/pcs
+  - buyer [2026-06-15 11:48:21]: can you give me quotation in Excel sheetplease
+  - seller [2026-06-15 11:48:31]: OK
+  - buyer [2026-06-15 11:51:22]: it will pass FDA?
+  - seller [2026-06-15 11:53:45]: Needs testing
+  - seller [2026-06-15 11:55:55]: {"cardType":12,"params":{"ctime":"1781495755883","extensionType":"pdf","from":"cn1511536179","id":"4666447358","md5":"8daa91569bc706756e8ec84442ac052c","parentId":"4658241326","sign":"ECEBC8F1E189E6904442C09BD05A238B27BB0B30","to":"us29251311566dyoo","type":"12","version":"1","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4666447358&parentId=4658241326&secOperateAliId=MC1IDX1TLZQcjYZ58vr7Yy1ySkGRcJ3LHeSdX0RCsLf2gIo9UdHJM5uHEHL-3cj7-JzLhqy&fileAction=officePreview&scene=1","name":"Akshay Shahani-Zibo Yude quotations.pdf","size":129366,"thumbnailUrl":"https://clouddisk.alibaba.com/file/videoThumb.htm?appkey=OneChat&id=4666447358&parentId=4658241326&secOperateAliId=MC1IDX1iU4c7A8pBSM1yotZEl1hIEp-cYKcfEC_A5Xp3egju8Z9zlAIKYiTlS7bfaBgiCus&scene=1"}}
+  - seller [2026-06-15 11:56:20]: However, many of our customers order it for drinking
+  - buyer [2026-06-15 11:56:45]: we also need ir for the same
+  - buyer [2026-06-15 11:56:54]: just need to know about USA market
+  - buyer [2026-06-15 11:57:05]: so FDA is must
+  - buyer [2026-06-15 11:57:11]: will it pass FDA
+  - seller [2026-06-15 11:57:49]: No problem, I'll check with you again after I start work in the afternoon
+  - buyer [2026-06-15 11:58:17]: please do
+  - seller [2026-06-15 11:58:33]: Okay~
+  - seller [2026-06-15 13:56:30]: Our glass jars are made from soda-lime glass and comply with FDA food-contact safety standards.
+
+========================================
+[24] Buyer: Danni Robinson | Country: AU | Level: L2 | Sales: Theo Li
+ID: 2171971125-4500040799954#11011 | unread: 0 | hasUnread: False
+chatLink: https://onetalk.alibaba.com/message/weblitePWA.htm?activeAccountId=1720358034&activeAccountIdEncrypt=MC1IDX1RcVvCTMs7ZEzGhaH2Nx4UGF7JyFPf6jlxVe-8kvO17uCoHEIgtfmKB0uP_u-Mp63
+Messages (40):
+  - buyer [2026-06-15 10:22:59]: This is a inquiry card. Inquiry id is 20492683911; Product id is 1601705569442. Product Name is Wholesale Custom Aroma Private Tag Home Decor Fragrance Scented Oval Plaster Disc; The note of the buyer's inquiry is undefined;
+  - seller [2026-06-15 10:23:13]: Yes, we can customize logos and packaging. What customization details do you have in mind?
+  - seller [2026-06-15 10:23:23]: Hi, yes.
+  - seller [2026-06-15 10:23:46]: What design do you need customized? MOQ: 500 pieces.
+  - buyer [2026-06-15 10:39:41]: {"height":1314,"width":1197,"url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=30811628548&parentId=30811628547&secOperateAliId=MC1IDX15jSCweEnOxM7qf2A8pnFUrHpTDONXawmwn7_nodSbRcTf_7xylZC-oK7-psrW7R8&fileAction=imagePreview&scene=1","isOriginal":1,"size":2291246,"md5":"9185f8ac0ff87116ac9d276e1d13e05d","fileId":"9185f8ac0ff87116ac9d276e1d13e05d.png","suffix":"png"}
+  - buyer [2026-06-15 10:40:52]: Great, thank you. 
+Would be looking at something similar to the below
+  - seller [2026-06-15 10:41:13]: No problem at all.
+  - seller [2026-06-15 10:41:19]: How much do you need?
+  - seller [2026-06-15 10:42:20]: Do you need me to provide a quote directly, or do you already have a design and know what size you'd like?
+  - buyer [2026-06-15 10:44:22]: I am just getting started on this one - so would need to pick a scent & confirm size / design
+  - seller [2026-06-15 10:47:11]: Okay, here's our fragrance chart.
+The style can be customized based on the images you provide.
+  - seller [2026-06-15 10:47:18]: {"cardType":12,"params":{"ctime":"1781491638427","extensionType":"pdf","from":"cn1511536179","id":"4665995399","md5":"7c63e1adf4c1d364824ae30ca6862077","parentId":"30811628547","sign":"48FAF5C07B029D6DA0B188954CF475ED52BBE560","to":"au29226783694oylr","type":"12","version":"1","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4665995399&parentId=30811628547&secOperateAliId=MC1IDX1fRcmyxZy_WMUNG8i9d6OsTvKTNvvqUpmUizQsiF-BYXb86c-J6g4iq7x-gLouUxC&fileAction=officePreview&scene=1","name":"石膏香味中英文版(1).pdf","size":963453,"thumbnailUrl":"https://clouddisk.alibaba.com/file/videoThumb.htm?appkey=OneChat&id=4665995399&parentId=30811628547&secOperateAliId=MC1IDX1NCdk3bDLUlfzNRVAvwG81Qq2a3gYRqDHhP-JlDGNvaWBPUMpfsnUjhN-Fjyp0qiy&scene=1"}}
+  - buyer [2026-06-15 11:02:56]: Great thank you - do you have standard sizes ? looking around 6-8 cm length
+  - seller [2026-06-15 11:03:12]: I'll take a photo and show it to you.
+  - buyer [2026-06-15 11:03:42]: Thank you
+  - seller [2026-06-15 11:06:09]: {"height":5712,"isOriginal":0,"width":4284,"size":5449232,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4662865561&parentId=30811628547&secOperateAliId=MC1IDX1jS1b6Ue7V-yor8n1KHCLVHQwDOvfFBzPZiBgBKlNYICgVNqxaSl5UFtR6jluE1F9&fileAction=imagePreview&scene=1","md5":"092df03d7ebbfaa35d9e2b94942ef4c3"}
+  - seller [2026-06-15 11:06:09]: {"height":5712,"isOriginal":0,"width":4284,"size":5582713,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4666127050&parentId=30811628547&secOperateAliId=MC1IDX1KHzDpRedwnlbRD9BZI82PhO7mjjsuOaY3j7fwF-xrRPcXYalce1vVfAFE0UZGxVa&fileAction=imagePreview&scene=1","md5":"99e92edc3ed567865b55b94f7086caa8"}
+  - seller [2026-06-15 11:06:17]: {"height":5712,"isOriginal":0,"width":4284,"size":5602121,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4662853957&parentId=30811628547&secOperateAliId=MC1IDX1fHFUaHoPFrYWalYLUhGM7J-7tvZEtx155_UMGaeRiy_izNVrrsWHGqlwN5XmsDwf&fileAction=imagePreview&scene=1","md5":"3ee92c1bef9b2e3f491067b0d0d37af1"}
+  - seller [2026-06-15 11:06:17]: {"height":5712,"isOriginal":0,"width":4284,"size":5528433,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4670136257&parentId=30811628547&secOperateAliId=MC1IDX1ZM_njmpld6sAeT9j-LuGfn1Dg8MWpqZNTwgmRZpoR9a55co_o1Najy8OAQkSLavn&fileAction=imagePreview&scene=1","md5":"ea27ae07bdf8c23f1fc20dcdea906aef"}
+  - seller [2026-06-15 11:06:19]: {"height":5712,"isOriginal":0,"width":4284,"size":5703121,"suffix":"jpg","url":"https://clouddisk.alibaba.com/file/redirectFileUrl.htm?appkey=OneChat&id=4670144021&parentId=30811628547&secOperateAliId=MC1IDX1DbqrNLIxC2__E3zZSmkIYr1IvP5e7bH3h6sZvNLVso2cNUKqkCw2A-3J-0b6oz2c&fileAction=imagePreview&scene=1","md5":"7de065994ab2669d978f55fefc5a08c0"}
+  - buyer [2026-06-15 11:12:05]: Great, could we go for the slimmer ? 9x6
+  - seller [2026-06-15 11:12:45]: Of course.
+  - seller [2026-06-15 11:15:19]: Shall we make it according to the design on the right, just like the rendering you provided?
+  - buyer [2026-06-15 11:15:40]: Yes please, I will upload the file. 
+Could I please ask for some samples for the scents avaliable ?
+  - seller [2026-06-15 11:17:00]: Of course
+  - seller [2026-06-15 11:17:06]: What kind of fragrance do you like?
+  - buyer [2026-06-15 11:19:52]: I am thinking - Morning Sea Breeze, White Magnolia, Hilton, Papaya / orange,
+  - seller [2026-06-15 11:21:50]: Do you need these fragrances customized for your mold, or would you prefer ready-made fragrances (no custom mold required)?
+  - buyer [2026-06-15 11:52:57]: Ready made is fine - im jsut not sure which to pick, so would like to sample them first if thats ok
+  - seller [2026-06-15 11:56:56]: Okay. I'll check after I get to work this afternoon whether these fragrances are in stock.
+Ready-made ones are relatively cheaper.
+  - buyer [2026-06-15 11:57:21]: Great thank you. For custom fragrences - how do i go about this ?
+  - buyer [2026-06-15 11:57:38]: Also - what type of file do you need  for the design specifications ?
+  - buyer [2026-06-15 11:57:48]: My whats app + 61 0400441758
+  - seller [2026-06-15 11:58:00]: stl
+  - seller [2026-06-15 11:58:13]: Okay~ I'll get in touch with you.
+  - seller [2026-06-15 11:58:28]: I'll report the mold fee and the sample fee to you this afternoon.
+  - buyer [2026-06-15 11:58:45]: Great thank you.
+  - seller [2026-06-15 11:59:05]: You're welcome~
+  - buyer [2026-06-15 12:28:57]: Hey Theo, I have the file as a PDF file - are your designers able to change to a STL file by any chance ?
+  - seller [2026-06-15 13:38:39]: Sure, but there may be a fee.
+Please send it to me first so I can take a look.
