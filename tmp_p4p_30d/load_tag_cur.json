@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "table_meta": {
+      "table_name": "TAG",
+      "description": "数据为阿里巴巴国际站全站推广（whole site）标签维度报告，涵盖人群标签（tagType=14）、地域标签（tagType=13）、投放标签（tagType=15），展示各标签的曝光占比、点击占比、消耗占比、商机量、L1+商机量、询盘量、TM咨询量、订单量等核心效果指标。",
+      "schema": [
+        {
+          "name": "日期",
+          "type": "STRING",
+          "description": "统计日期"
+        },
+        {
+          "name": "标签类型",
+          "type": "STRING",
+          "description": "标签类型，13=地域标签，14=人群标签，15=投放标签"
+        },
+        {
+          "name": "fiClickCntRatio",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "该标签的点击量占账户总点击量的比率"
+        },
+        {
+          "name": "标签名称",
+          "type": "STRING",
+          "description": "标签名称"
+        },
+        {
+          "name": "impressionCntRatio",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "该标签的曝光量占账户总曝光量的比率"
+        },
+        {
+          "name": "国家",
+          "type": "STRING",
+          "description": "国家或地区名称"
+        }
+      ],
+      "format_details": {
+        "header_present": true,
+        "delimiter": "\t",
+        "type": "TSV"
+      },
+      "total_rows": 2
+    }
+  }
+}

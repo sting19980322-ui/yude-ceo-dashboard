@@ -1,0 +1,92 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "table_meta": {
+      "table_name": "STD_PROD",
+      "description": "数据为阿里巴巴国际站全站推广商品维度的汇总报告，展示各商品的商机量、点击量、曝光量、商机转化率等核心效果指标，可用于分析各商品的投放效果。",
+      "schema": [
+        {
+          "name": "点击率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "广告点击量与曝光量的比率"
+        },
+        {
+          "name": "产品ID",
+          "type": "LONG",
+          "description": "商品ID"
+        },
+        {
+          "name": "商品信息",
+          "type": "STRING",
+          "description": "商品名称"
+        },
+        {
+          "name": "日期",
+          "type": "STRING",
+          "description": "统计日期"
+        },
+        {
+          "name": "点击量",
+          "type": "LONG",
+          "description": "统计周期内广告被买家点击的总次数"
+        },
+        {
+          "name": "订单量",
+          "type": "LONG",
+          "description": "通过广告带来的订单总数量"
+        },
+        {
+          "name": "曝光量",
+          "type": "LONG",
+          "description": "统计周期内广告被展示给买家的总次数"
+        },
+        {
+          "name": "TM咨询量",
+          "type": "LONG",
+          "description": "买家通过广告发起TM在线咨询的总次数"
+        },
+        {
+          "name": "L1+点击量",
+          "type": "LONG",
+          "description": "L1及以上等级买家的广告点击总量"
+        },
+        {
+          "name": "全站商机转化率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "点击转化为全站商机的比率"
+        },
+        {
+          "name": "L1+买家点击占比",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "L1+买家点击量占总点击量的比率"
+        },
+        {
+          "name": "全站商机量",
+          "type": "LONG",
+          "description": "通过全站推广带来的商机总量"
+        },
+        {
+          "name": "L1+全站商机量",
+          "type": "LONG",
+          "description": "L1及以上等级买家带来的全站商机量"
+        },
+        {
+          "name": "询盘量",
+          "type": "LONG",
+          "description": "买家通过广告发起询盘的总数量"
+        }
+      ],
+      "format_details": {
+        "header_present": true,
+        "delimiter": "\t",
+        "type": "TSV"
+      },
+      "total_rows": 877
+    }
+  }
+}

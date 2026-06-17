@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": [
+    {
+      "query": "SELECT * FROM TAG",
+      "success": true,
+      "tsv_data": "日期\t标签类型\tFICLICKCNTRATIO\t标签名称\tIMPRESSIONCNTRATIO\t国家\n2026-05-19~2026-06-17\t\t1.36\tPC渠道\t2.11\tpc_leads\n2026-05-19~2026-06-17\t\t17.41\tL1+买家\t17.75\tstar_buyer_leads\n"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": [
+    {
+      "query": "SELECT * FROM PREV_COMPANY",
+      "success": true,
+      "tsv_data": "点击率\t花费\t日期\t点击量\t订单量\t曝光量\tTM咨询量\t全站商机转化率\t全站商机成本\t点击成本\t全站商机量\tL1+全站商机量\t询盘量\n2.94\t6704.1\t2026-04-19~2026-05-18\t1729\t0\t58714\t73\t4.97\t77.95\t3.88\t86\t64\t26\n"
+    }
+  ]
+}

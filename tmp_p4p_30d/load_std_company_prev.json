@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "table_meta": {
+      "table_name": "STD_PREV_COMPANY",
+      "description": "数据为阿里巴巴国际站（B2B平台）全站推广账户维度的汇总报告，包含花费、商机量、商机成本、点击量、点击成本、曝光量、点击率、询盘量、TM咨询量、订单量等核心效果指标，可用于分析账户整体投放效果和趋势。",
+      "schema": [
+        {
+          "name": "点击率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "广告点击量与曝光量的比率，即点击量/曝光量"
+        },
+        {
+          "name": "花费",
+          "type": "DOUBLE",
+          "description": "账户在统计周期内的广告总花费，单位为人民币元"
+        },
+        {
+          "name": "支付订单量",
+          "type": "LONG",
+          "description": "通过广告带来的支付订单数量，仅在优化目标为&quot;最大化订单&quot;时展示"
+        },
+        {
+          "name": "日期",
+          "type": "STRING",
+          "description": "统计周期"
+        },
+        {
+          "name": "点击量",
+          "type": "LONG",
+          "description": "统计周期内广告被买家点击的总次数"
+        },
+        {
+          "name": "订单量",
+          "type": "LONG",
+          "description": "通过广告带来的订单总数量"
+        },
+        {
+          "name": "曝光量",
+          "type": "LONG",
+          "description": "统计周期内广告被展示给买家的总次数"
+        },
+        {
+          "name": "TM咨询量",
+          "type": "LONG",
+          "description": "买家通过广告发起TM（阿里旺旺）在线咨询的总次数"
+        },
+        {
+          "name": "L1+点击量",
+          "type": "LONG",
+          "description": "L1及以上等级买家的广告点击总量"
+        },
+        {
+          "name": "全站商机转化率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "点击转化为全站商机的比率，即商机量/点击量"
+        },
+        {
+          "name": "支付订单转化率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "点击转化为支付订单的比率，仅在优化目标为&quot;最大化订单&quot;时展示"
+        },
+        {
+          "name": "支付订单成本",
+          "type": "DOUBLE",
+          "description": "每获得一个支付订单的平均花费成本，仅在优化目标为&quot;最大化订单&quot;时展示"
+        },
+        {
+          "name": "全站商机成本",
+          "type": "DOUBLE",
+          "description": "每获得一个全站商机的平均花费成本，单位为人民币元"
+        },
+        {
+          "name": "L1+买家点击占比",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "L1+买家点击量占总点击量的比率，反映优质买家流量占比"
+        },
+        {
+          "name": "点击成本",
+          "type": "DOUBLE",
+          "description": "每次广告点击的平均花费成本，单位为人民币元"
+        },
+        {
+          "name": "全站商机量",
+          "type": "LONG",
+          "description": "通过全站推广带来的商机总量，包含询盘、TM咨询等商机类型"
+        },
+        {
+          "name": "L1+全站商机量",
+          "type": "LONG",
+          "description": "L1及以上等级买家带来的全站商机量，L1+表示有一定活跃度的优质买家"
+        },
+        {
+          "name": "询盘量",
+          "type": "LONG",
+          "description": "买家通过广告发起询盘的总数量，询盘是B2B平台的核心商机类型"
+        }
+      ],
+      "format_details": {
+        "header_present": true,
+        "delimiter": "\t",
+        "type": "TSV"
+      },
+      "total_rows": 1
+    }
+  }
+}

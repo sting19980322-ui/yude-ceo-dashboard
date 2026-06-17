@@ -1,0 +1,322 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "detailList": [
+      {
+        "campaignType": "1",
+        "gmtModify": "2024-04-25 09:34:00",
+        "optimizeTarget": "null",
+        "campaignId": "310900064",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "关键词推广",
+        "subType": "null",
+        "maxPrice": "0.0",
+        "gmtCreate": "2024-04-09 10:07:50",
+        "campaignName": "2024年4月9日关键词推广计划",
+        "onlineProductCount": "15",
+        "budget": "205.0"
+      },
+      {
+        "campaignType": "1",
+        "gmtModify": "2023-12-12 16:23:34",
+        "optimizeTarget": "null",
+        "campaignId": "219102721",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "关键词推广",
+        "subType": "null",
+        "maxPrice": "0.0",
+        "gmtCreate": "2022-08-03 16:11:44",
+        "campaignName": "关键词推广-8月3日",
+        "onlineProductCount": "17",
+        "budget": "100.0"
+      },
+      {
+        "campaignType": "1",
+        "gmtModify": "2023-12-12 21:28:08",
+        "optimizeTarget": "null",
+        "campaignId": "286553635",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "关键词推广",
+        "subType": "null",
+        "maxPrice": "0.0",
+        "gmtCreate": "2023-10-23 14:07:57",
+        "campaignName": "关键词推广计划2023年10月23日",
+        "onlineProductCount": "8",
+        "budget": "100.0"
+      },
+      {
+        "campaignType": "1",
+        "gmtModify": "2024-09-13 08:30:42",
+        "optimizeTarget": "null",
+        "campaignId": "313844015",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "关键词推广",
+        "subType": "null",
+        "maxPrice": "0.0",
+        "gmtCreate": "2024-04-25 15:23:22",
+        "campaignName": "次爆品关键词推广24年4月25日",
+        "onlineProductCount": "3",
+        "budget": "60.0"
+      },
+      {
+        "campaignType": "1",
+        "gmtModify": "2024-08-22 08:29:27",
+        "optimizeTarget": "null",
+        "campaignId": "313833007",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "关键词推广",
+        "subType": "null",
+        "maxPrice": "0.0",
+        "gmtCreate": "2024-04-25 15:13:09",
+        "campaignName": "爆品关键词推广24年4月25日",
+        "onlineProductCount": "3",
+        "budget": "70.0"
+      },
+      {
+        "campaignType": "1",
+        "gmtModify": "2024-09-18 08:30:41",
+        "optimizeTarget": "null",
+        "campaignId": "312679525",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "关键词推广",
+        "subType": "null",
+        "maxPrice": "0.0",
+        "gmtCreate": "2024-04-25 15:35:46",
+        "campaignName": "虹彩关键词推广24年4月25日",
+        "onlineProductCount": "3",
+        "budget": "70.0"
+      },
+      {
+        "campaignType": "2",
+        "gmtModify": "2025-02-14 08:25:54",
+        "optimizeTarget": "null",
+        "campaignId": "339066247",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "定向推广",
+        "subType": "null",
+        "maxPrice": "4.0",
+        "gmtCreate": "2024-11-26 14:07:30",
+        "campaignName": "普通品成长-2024年11月26日",
+        "onlineProductCount": "5",
+        "budget": "70.0"
+      },
+      {
+        "campaignType": "2",
+        "gmtModify": "2024-11-26 08:26:18",
+        "optimizeTarget": "null",
+        "campaignId": "328713017",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "定向推广",
+        "subType": "null",
+        "maxPrice": "3.5",
+        "gmtCreate": "2024-08-22 11:31:39",
+        "campaignName": "普通品成长2024-8-22",
+        "onlineProductCount": "6",
+        "budget": "75.0"
+      },
+      {
+        "campaignType": "4",
+        "gmtModify": "2022-03-24 09:15:28",
+        "optimizeTarget": "null",
+        "campaignId": "197049839",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "快速引流",
+        "subType": "null",
+        "maxPrice": "3.0",
+        "gmtCreate": "2022-03-06 08:10:21",
+        "campaignName": "快速引流-2022年3月6日",
+        "onlineProductCount": "386",
+        "budget": "75.0"
+      },
+      {
+        "campaignType": "8",
+        "gmtModify": "2025-02-05 08:29:51",
+        "optimizeTarget": "null",
+        "campaignId": "331555348",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "爆品助推",
+        "subType": "null",
+        "maxPrice": "4.1",
+        "gmtCreate": "2024-09-18 13:51:18",
+        "campaignName": "2024年9月18日优爆品助推",
+        "onlineProductCount": "3",
+        "budget": "70.0"
+      },
+      {
+        "campaignType": "8",
+        "gmtModify": "2025-03-22 08:19:40",
+        "optimizeTarget": "null",
+        "campaignId": "349683402",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "爆品助推",
+        "subType": "null",
+        "maxPrice": "5.9",
+        "gmtCreate": "2025-03-18 14:54:36",
+        "campaignName": "2025年3月18日建立优品助推",
+        "onlineProductCount": "13",
+        "budget": "120.0"
+      },
+      {
+        "campaignType": "8",
+        "gmtModify": "2025-01-21 08:24:32",
+        "optimizeTarget": "null",
+        "campaignId": "342525934",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "爆品助推",
+        "subType": "null",
+        "maxPrice": "4.2",
+        "gmtCreate": "2025-01-14 14:47:57",
+        "campaignName": "25年1月14日单推雕刻-优助推",
+        "onlineProductCount": "1",
+        "budget": "80.0"
+      },
+      {
+        "campaignType": "8",
+        "gmtModify": "2025-01-16 08:25:36",
+        "optimizeTarget": "null",
+        "campaignId": "344912559",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "爆品助推",
+        "subType": "null",
+        "maxPrice": "4.0",
+        "gmtCreate": "2025-01-15 15:11:43",
+        "campaignName": "25年1月15日单推弧底杯",
+        "onlineProductCount": "1",
+        "budget": "70.0"
+      },
+      {
+        "campaignType": "8",
+        "gmtModify": "2025-01-15 08:23:19",
+        "optimizeTarget": "null",
+        "campaignId": "342751832",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "爆品助推",
+        "subType": "null",
+        "maxPrice": "4.0",
+        "gmtCreate": "2025-01-14 14:11:45",
+        "campaignName": "优爆品助推-2025年1月14日",
+        "onlineProductCount": "5",
+        "budget": "80.0"
+      },
+      {
+        "campaignType": "8",
+        "gmtModify": "2025-03-03 08:28:07",
+        "optimizeTarget": "null",
+        "campaignId": "345623143",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "爆品助推",
+        "subType": "null",
+        "maxPrice": "4.2",
+        "gmtCreate": "2025-02-05 17:01:30",
+        "campaignName": "优爆品助推2025年2月5日",
+        "onlineProductCount": "3",
+        "budget": "85.0"
+      },
+      {
+        "campaignType": "47",
+        "gmtModify": "2026-03-03 16:20:27",
+        "optimizeTarget": "whole_site_fb",
+        "campaignId": "373787873",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "全站推-日预算版",
+        "subType": "whole_store_hot_product",
+        "maxPrice": "56.9",
+        "gmtCreate": "2026-02-05 16:40:23",
+        "campaignName": "全站推广_推优0205",
+        "onlineProductCount": "76",
+        "budget": "150.0"
+      },
+      {
+        "campaignType": "47",
+        "gmtModify": "2026-05-25 13:49:55",
+        "optimizeTarget": "whole_site_fb",
+        "campaignId": "378289958",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "全站推-日预算版",
+        "subType": "whole_store_hot_product",
+        "maxPrice": "52.0",
+        "gmtCreate": "2026-05-25 09:32:58",
+        "campaignName": "全站推广_推优0525",
+        "onlineProductCount": "48",
+        "budget": "180.0"
+      },
+      {
+        "campaignType": "47",
+        "gmtModify": "2026-04-22 14:03:30",
+        "optimizeTarget": "whole_site_fb",
+        "campaignId": "374531779",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "全站推-日预算版",
+        "subType": "whole_store_hot_product",
+        "maxPrice": "75.0",
+        "gmtCreate": "2026-03-03 16:24:04",
+        "campaignName": "全站推广_推优品3月",
+        "onlineProductCount": "4",
+        "budget": "150.0"
+      },
+      {
+        "campaignType": "47",
+        "gmtModify": "2026-06-06 16:50:10",
+        "optimizeTarget": "whole_site_fb",
+        "campaignId": "380198035",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "全站推-日预算版",
+        "subType": "whole_store_product",
+        "maxPrice": "45.0",
+        "gmtCreate": "2026-05-25 10:07:59",
+        "campaignName": "全站推广_推潜力品0525",
+        "onlineProductCount": "236",
+        "budget": "180.0"
+      },
+      {
+        "campaignType": "47",
+        "gmtModify": "2026-03-03 16:20:22",
+        "optimizeTarget": "whole_site_fb",
+        "campaignId": "375474843",
+        "onlineStatus": "-2",
+        "campaignTypeDesc": "全站推-日预算版",
+        "subType": "whole_store_hot_product",
+        "maxPrice": "61.5",
+        "gmtCreate": "2026-02-05 16:32:39",
+        "campaignName": "全站推广_推爆品0205",
+        "onlineProductCount": "11",
+        "budget": "150.0"
+      }
+    ],
+    "totalSummary": null,
+    "totalRows": 39,
+    "fieldConfigList": {
+      "campaignType": {
+        "serverRenderName": "计划类型"
+      },
+      "gmtModify": {},
+      "campaignId": {
+        "serverRenderName": "计划ID"
+      },
+      "optimizeTarget": {
+        "serverRenderName": "投放目标"
+      },
+      "onlineStatus": {
+        "serverRenderName": "状态"
+      },
+      "campaignTypeDesc": {},
+      "subType": {},
+      "maxPrice": {
+        "serverRenderName": "出价"
+      },
+      "gmtCreate": {},
+      "campaignName": {
+        "serverRenderName": "计划名称"
+      },
+      "budget": {
+        "serverRenderName": "预算"
+      },
+      "onlineProductCount": {
+        "serverRenderName": "推广商品数"
+      }
+    },
+    "extendConfigs": null
+  }
+}

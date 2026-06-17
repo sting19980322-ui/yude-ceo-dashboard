@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": [
+    {
+      "query": "SELECT * FROM SW_CAMP17 LIMIT 30",
+      "success": true,
+      "tsv_data": "CLICKCNTRATIO\t买家搜索词\tIMPRESSIONCNTRATIO\n5.56\tcandle vessels\t2.92\n2.78\tcandle jar with lid\t1.31\n2.78\tfrosted jars with lids\t0.1\n2.78\tperfume bottle amber glass\t0.1\n2.78\ttable lamps\t0.1\n2.78\tluxury candle jar with cork lid\t0.4\n2.78\tempty candle jars for candles wholesale in bulk\t0.3\n2.78\tcandles containers\t0.4\n2.78\tcandles jars with lids\t1.01\n2.78\tmeal prep containers glass\t0.2\n2.78\tcandle jar forsted\t0.1\n2.78\tcandle\t1.91\n2.78\twholesale 10oz candle vessels\t0.81\n2.78\tcandle boxes black Trade\t0.1\n2.78\tsouvenir mini candle\t0.1\n2.78\tVases\t0.81\n2.78\tmason glass jar airtight\t0.2\n2.78\twax melt warmer\t0.1\n2.78\tluxury high quality premium sealed jar glass with brass lid\t0.2\n2.78\tscented candles\t0.7\n2.78\tamber glass jar large\t0.1\n2.78\tcandle jar wholesale\t0.6\n2.78\tstorage container sets\t0.4\n2.78\tscented+candles+wholesale\t0.1\n2.78\tstorage containers glass\t0.3\n2.78\tscented candles small\t0.1\n2.78\tmason jars 500 ml with lid\t0.1\n2.78\tcustom scented candles\t0.2\n2.78\telectric wax melt warmer\t0.1\n2.78\tglass flower vase\t0.4\n"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "table_meta": {
+      "table_name": "SW_CAMP11",
+      "description": "数据为阿里巴巴国际站全站推广（whole site）搜索词维度报告，对齐全站推 BP5 scene_app_whole_site_keyword_report_bp5/search_keyword_list，展示买家搜索词的点击占比、曝光占比，可用于分析全站口径下的关键词流量分布。底层物理表为全站搜索词表（ad_all_site_se_kw_effect_view），仅暴露占比类指标。",
+      "schema": [
+        {
+          "name": "clickCntRatio",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "该搜索词带来的点击量占账户总点击量的比率（全站口径）"
+        },
+        {
+          "name": "买家搜索词",
+          "type": "STRING",
+          "description": "买家搜索词内容"
+        },
+        {
+          "name": "impressionCntRatio",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "该搜索词带来的曝光量占账户总曝光量的比率（全站口径）"
+        }
+      ],
+      "format_details": {
+        "header_present": true,
+        "delimiter": "\t",
+        "type": "TSV"
+      },
+      "total_rows": 0
+    }
+  }
+}

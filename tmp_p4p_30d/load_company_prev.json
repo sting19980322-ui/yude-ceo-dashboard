@@ -1,0 +1,86 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "table_meta": {
+      "table_name": "PREV_COMPANY",
+      "description": "数据为阿里巴巴国际站全站推广（whole site）账户维度汇总报告，对齐全站推 BP5 返回字段，包含全站口径的商机量、商机成本、商机率、L1+商机量、询盘量、TM咨询量、订单量等核心效果指标。",
+      "schema": [
+        {
+          "name": "点击率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "点击率 = 点击量/曝光量"
+        },
+        {
+          "name": "花费",
+          "type": "DOUBLE",
+          "description": "账户在统计周期内的广告总花费，单位为人民币元"
+        },
+        {
+          "name": "日期",
+          "type": "STRING",
+          "description": "统计周期"
+        },
+        {
+          "name": "点击量",
+          "type": "LONG",
+          "description": "统计周期内广告被点击的总次数"
+        },
+        {
+          "name": "订单量",
+          "type": "LONG",
+          "description": "订单量"
+        },
+        {
+          "name": "曝光量",
+          "type": "LONG",
+          "description": "广告曝光总次数"
+        },
+        {
+          "name": "TM咨询量",
+          "type": "LONG",
+          "description": "TM咨询量"
+        },
+        {
+          "name": "全站商机转化率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "点击转化为全站商机的比率"
+        },
+        {
+          "name": "全站商机成本",
+          "type": "DOUBLE",
+          "description": "每获得一个全站商机的平均花费成本（元）"
+        },
+        {
+          "name": "点击成本",
+          "type": "DOUBLE",
+          "description": "每次点击的平均花费成本，单位元"
+        },
+        {
+          "name": "全站商机量",
+          "type": "LONG",
+          "description": "全站推广带来的商机总量"
+        },
+        {
+          "name": "L1+全站商机量",
+          "type": "LONG",
+          "description": "L1+买家带来的全站商机量（"
+        },
+        {
+          "name": "询盘量",
+          "type": "LONG",
+          "description": "询盘量"
+        }
+      ],
+      "format_details": {
+        "header_present": true,
+        "delimiter": "\t",
+        "type": "TSV"
+      },
+      "total_rows": 1
+    }
+  }
+}

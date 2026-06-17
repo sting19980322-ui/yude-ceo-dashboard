@@ -1,0 +1,107 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": {
+    "table_meta": {
+      "table_name": "STD_CUR_CAMP",
+      "description": "数据为阿里巴巴国际站全站推广计划维度的汇总报告，包含花费、商机量、商机成本、点击量、点击成本、曝光量、点击率、询盘量、TM咨询量、订单量等核心效果指标，可用于分析各计划的投放效果和对比。",
+      "schema": [
+        {
+          "name": "点击率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "广告点击量与曝光量的比率"
+        },
+        {
+          "name": "花费",
+          "type": "DOUBLE",
+          "description": "计划在统计周期内的广告总花费，单位为人民币元"
+        },
+        {
+          "name": "计划ID",
+          "type": "LONG",
+          "description": "广告计划ID"
+        },
+        {
+          "name": "日期",
+          "type": "STRING",
+          "description": "统计日期"
+        },
+        {
+          "name": "点击量",
+          "type": "LONG",
+          "description": "统计周期内广告被买家点击的总次数"
+        },
+        {
+          "name": "订单量",
+          "type": "LONG",
+          "description": "通过广告带来的订单总数量"
+        },
+        {
+          "name": "曝光量",
+          "type": "LONG",
+          "description": "统计周期内广告被展示给买家的总次数"
+        },
+        {
+          "name": "TM咨询量",
+          "type": "LONG",
+          "description": "买家通过广告发起TM在线咨询的总次数"
+        },
+        {
+          "name": "L1+点击量",
+          "type": "LONG",
+          "description": "L1及以上等级买家的广告点击总量"
+        },
+        {
+          "name": "全站商机转化率",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "点击转化为全站商机的比率"
+        },
+        {
+          "name": "全站商机成本",
+          "type": "DOUBLE",
+          "description": "每获得一个全站商机的平均花费成本，单位为人民币元"
+        },
+        {
+          "name": "L1+买家点击占比",
+          "type": "DOUBLE",
+          "unit": "%",
+          "description": "L1+买家点击量占总点击量的比率"
+        },
+        {
+          "name": "点击成本",
+          "type": "DOUBLE",
+          "description": "每次广告点击的平均花费成本，单位为人民币元"
+        },
+        {
+          "name": "全站商机量",
+          "type": "LONG",
+          "description": "通过全站推广带来的商机总量"
+        },
+        {
+          "name": "L1+全站商机量",
+          "type": "LONG",
+          "description": "L1及以上等级买家带来的全站商机量"
+        },
+        {
+          "name": "计划名称",
+          "type": "STRING",
+          "description": "广告计划名称"
+        },
+        {
+          "name": "询盘量",
+          "type": "LONG",
+          "description": "买家通过广告发起询盘的总数量"
+        }
+      ],
+      "format_details": {
+        "header_present": true,
+        "delimiter": "\t",
+        "type": "TSV"
+      },
+      "total_rows": 5
+    }
+  }
+}

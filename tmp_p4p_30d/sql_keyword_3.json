@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "errorCode": 200,
+  "errorMsg": null,
+  "data": [
+    {
+      "query": "SELECT * FROM SW_CAMP3 LIMIT 30",
+      "success": true,
+      "tsv_data": "CLICKCNTRATIO\t买家搜索词\tIMPRESSIONCNTRATIO\n"
+    }
+  ]
+}
